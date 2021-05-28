@@ -77,7 +77,7 @@ Config node scripts is set as PowerBoot and stored in the image of ubuntu_plain.
 
 # Click Integration
 
-The part of work has been integrated into the image of ubuntu_plain.vmdk, which VNF instances can used to implement various different type of network services. Such as:
+The part of work has been integrated into the image of ubuntu_plain.vmdk, which VNF instances can used to implement various different type of network services, such as:
 
     click\extern_firewall.click 
     click\extern_firewall-type2.click
