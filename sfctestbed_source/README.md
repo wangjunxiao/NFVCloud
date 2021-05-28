@@ -20,6 +20,7 @@ Application annotation:
 	@EnableScheduling
 
 Service annotation: 
+
 \configplatform\ 
 
 \openstack\ 
@@ -32,6 +33,7 @@ Service annotation:
 	@Autowired
 
 Rest annotation: 
+
 \controller\ 
 
 	@RestController
@@ -41,6 +43,7 @@ Rest annotation:
 	@RequestBody
 
 DAO annotation: 
+
 \dao\ 
 	
 	@Transactional
@@ -48,12 +51,14 @@ DAO annotation:
 	@Modifying
 
 Job annotation: 
+
 \job\ 
 
 	@Component
 	@Scheduled
 
 Entity annotation: 
+
 \modular\ 
 
 	@Entity
