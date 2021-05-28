@@ -11,6 +11,7 @@
 The Spring Boot MVC helps the sfctestbed in accelerating and facilitating application development. 
 
 Application annotation: 
+
 \DemoApplication 
 
 	@SpringBootApplication
@@ -20,8 +21,11 @@ Application annotation:
 
 Service annotation: 
 \configplatform\ 
+
 \openstack\ 
+
 \service\ 
+
 \template\ 
 	
 	@Service
