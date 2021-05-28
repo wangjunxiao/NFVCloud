@@ -5,7 +5,7 @@
 
 (a) x86 Server * 3 with OpenStack nodes deployed, in which 2 server with more memory and cpu capacity as compute nodes, 1 server with more nic and disk capacity as the control node, network node and storage node  
 
-(b) Web Server * 1 with NFVCloud project and project's database depolyed
+(b) Web Server * 1 with sfctestbed project and project's database depolyed
 
 (c) Commodity L2 Switch * 1 for connecting all servers together  
 
