@@ -1,6 +1,6 @@
 # Prerequisites
 
-Minimal Runtime Environment  
+#### Minimal Runtime Environment  
 1. Hardware:  
 (a) x86 Server * 3 for deploying OpenStack node, in which 2 server with more memory and cpu capacity as compute node, 1 server with more nic and disk capacity as control node, network node and storage node  
 (b) Web Server * 1 for deploying sfctestbed project and project's database  
