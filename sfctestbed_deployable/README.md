@@ -1,4 +1,4 @@
-#Prerequisites
+# Prerequisites
 
 Minimal Runtime Environment  
 1. Hardware:  
@@ -17,7 +17,7 @@ Minimal Runtime Environment
 (d) deleteSDNall.txt: clear project's database  
 
 
-#Configuration
+# Configuration
 
 
 \target\classes\application.propertiesapache-tomcat-6.0.44-green\webapps\sdn\WEB-INF\classes\config.properties:
@@ -77,7 +77,7 @@ The part of work has been integrated into the image of ubuntu_plain.vmdk, which 
     click\mazu-nat-type2.click
 
 
-#Start Up
+# Start Up
 
 1. deploy \target into Web server
 
@@ -86,6 +86,6 @@ The part of work has been integrated into the image of ubuntu_plain.vmdk, which 
 3. run java –jar demo-0.0.1-SNAPSHOT.jar 
 
 
-#Credits
+# Credits
 
 1. OpenStack 2. Click
