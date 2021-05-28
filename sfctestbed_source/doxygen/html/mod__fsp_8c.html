@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>demo: C:/workspace/demo/src/main/script/node_modules/node-forge/mod_fsp/mod_fsp.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">demo
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">Vfunc Spring Boot项目概要</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a5be7bbed3ff2f129951759fe96bf5d5.html">workspace</a></li><li class="navelem"><a class="el" href="dir_8f7847266e4a03a0d974bc39d14bc3ff.html">demo</a></li><li class="navelem"><a class="el" href="dir_6faaf966280a35616960dcfb43b5502b.html">src</a></li><li class="navelem"><a class="el" href="dir_081f1f5b189e4f5d3d06b161a883ec3b.html">main</a></li><li class="navelem"><a class="el" href="dir_129bd89c68671d69928118e8dbe3fb70.html">script</a></li><li class="navelem"><a class="el" href="dir_47c23144307e90772d88cc9cde96ea5b.html">node_modules</a></li><li class="navelem"><a class="el" href="dir_7e8eef9c8bf268c446b547c5c6d2c2b8.html">node-forge</a></li><li class="navelem"><a class="el" href="dir_4818080cf07ef09bed7854ef2fad389a.html">mod_fsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">mod_fsp.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;httpd.h&quot;</code><br />
+<code>#include &quot;http_config.h&quot;</code><br />
+<code>#include &quot;http_core.h&quot;</code><br />
+<code>#include &quot;ap_compat.h&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsp__config.html">fsp_config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfilter__state.html">filter_state</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af8d04247660f0d365f586bf68997769c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__fsp_8c.html#af8d04247660f0d365f586bf68997769c">PFR_LENGTH</a>&#160;&#160;&#160;23</td></tr>
+<tr class="separator:af8d04247660f0d365f586bf68997769c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aa6bae1f50d54db48caa977186a23ef0f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structfsp__config.html">fsp_config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__fsp_8c.html#aa6bae1f50d54db48caa977186a23ef0f">fsp_config</a></td></tr>
+<tr class="separator:aa6bae1f50d54db48caa977186a23ef0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cad7806a4662465f4caf7624d3ea9b6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structfilter__state.html">filter_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__fsp_8c.html#a2cad7806a4662465f4caf7624d3ea9b6">filter_state</a></td></tr>
+<tr class="separator:a2cad7806a4662465f4caf7624d3ea9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ab98cc7569961d63c1201b33841c04d1d"><td class="memItemLeft" align="right" valign="top">module AP_MODULE_DECLARE_DATA&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__fsp_8c.html#ab98cc7569961d63c1201b33841c04d1d">fsp_module</a></td></tr>
+<tr class="separator:ab98cc7569961d63c1201b33841c04d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="af8d04247660f0d365f586bf68997769c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d04247660f0d365f586bf68997769c">&#9670;&nbsp;</a></span>PFR_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PFR_LENGTH&#160;&#160;&#160;23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flash Socket Policy Apache Module.</p>
+<p>This module provides a flash socket policy file on the same port that serves HTTP on Apache. This can help simplify setting up a server that supports cross-domain communication with flash.</p>
+<p>Quick note about Apache memory handling: Data is allocated from pools and is not manually returned to those pools. The pools are typically considered short-lived and will be cleaned up automatically by Apache.</p>
+<dl class="section author"><dt>作者</dt><dd>Dave Longley</dd></dl>
+<p>Copyright (c) 2010 Digital Bazaar, Inc. All rights reserved. </p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a2cad7806a4662465f4caf7624d3ea9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cad7806a4662465f4caf7624d3ea9b6">&#9670;&nbsp;</a></span>filter_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structfilter__state.html">filter_state</a>  <a class="el" href="structfilter__state.html">filter_state</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6bae1f50d54db48caa977186a23ef0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bae1f50d54db48caa977186a23ef0f">&#9670;&nbsp;</a></span>fsp_config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structfsp__config.html">fsp_config</a>  <a class="el" href="structfsp__config.html">fsp_config</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ab98cc7569961d63c1201b33841c04d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98cc7569961d63c1201b33841c04d1d">&#9670;&nbsp;</a></span>fsp_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">module AP_MODULE_DECLARE_DATA fsp_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">    STANDARD20_MODULE_STUFF,    </div><div class="line">    NULL,                       </div><div class="line">    NULL,                       </div><div class="line">    fsp_create_config,          </div><div class="line">    NULL,                       </div><div class="line">    fsp_cmds,                   </div><div class="line">    fsp_register_hooks          </div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,263 @@
+\hypertarget{class_presents}{}\section{Presents类 参考}
+\label{class_presents}\index{Presents@{Presents}}
+
+
+\subsection{详细描述}
+\subparagraph*{Opt.\+name}
+
+Set a canonical option identifier to be used anywhere in the A\+PI.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+name} option name~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+title}
+
+Set a long description for option to be used anywhere in text messages.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+title} option title~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+short}
+
+Set a short key for option to be used with one hyphen from command line.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+short}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+long}
+
+Set a short key for option to be used with double hyphens from command line.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+long}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+flag}
+
+Make an option boolean, i.\+e. option without value.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+arr}}
+
+{\bfseries  Makes an option accepts multiple values.~\newline
+ Otherwise, the value will be used by the latter passed.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+req}}}
+
+{\bfseries {\bfseries  Makes an option req.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+only}}}}
+
+{\bfseries {\bfseries {\bfseries  Makes an option to act as a command, i.\+e. program will exit just after option action.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+val}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Set a validation (or value) function for argument.~\newline
+ Value from command line passes through before becoming available from A\+PI.~\newline
+ Using for validation and convertion simple types to any values.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily \+\_\+val} validating function, invoked in the context of option instance and has one parameter with value from command line~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+def}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Set a default value for option. Default value passed through validation function as ordinary value.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+input}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Make option value inputting stream. It\textquotesingle{}s add useful validation and shortcut for S\+T\+D\+IN. {\bfseries \begin{DoxyReturn}{返回}
+$\ast$\{C\+O\+A.\+Opt\}$\ast$ {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+output}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Make option value outputing stream.~\newline
+ It\textquotesingle{}s add useful validation and shortcut for S\+T\+D\+O\+UT.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+act}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Add action for current option command. This action is performed if the current option is present in parsed options (with any value).~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily act} action function, invoked in the context of command instance and has the parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} parsed options~\newline
+
+\item {\itshape Array} {\ttfamily args} parsed arguments~\newline
+
+\item {\itshape Object} {\ttfamily res} actions result accumulator~\newline
+ It can return rejected promise by Cmd.\+reject (in case of error) or any other value treated as result.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+comp}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set custom additional completion for current option.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily fn} completion generation function, invoked in the context of command instance. Accepts parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} completion options~\newline
+ It can return promise or any other value treated as result.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+end}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Finish chain for current option and return parent command instance.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Cmd} {\ttfamily parent} command
+\end{DoxyReturn}
+\paragraph*{Arg}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Argument is a unnamed entity.~\newline
+ From command line arguments passed as list of unnamed values.}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries \subparagraph*{Arg.\+name}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set a canonical argument identifier to be used anywhere in text messages.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+name} argument name~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+title}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set a long description for argument to be used anywhere in text messages.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+title} argument title~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+arr}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Makes an argument accepts multiple values.~\newline
+ Otherwise, the value will be used by the latter passed.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+req}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Makes an argument req.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+val}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set a validation (or value) function for argument.~\newline
+ Value from command line passes through before becoming available from A\+PI.~\newline
+ Using for validation and convertion simple types to any values.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily \+\_\+val} validating function, invoked in the context of argument instance and has one parameter with value from command line~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+def}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set a default value for argument. Default value passed through validation function as ordinary value.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+output}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Make argument value outputing stream.~\newline
+ It\textquotesingle{}s add useful validation and shortcut for S\+T\+D\+O\+UT.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+comp}}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Set custom additional completion for current argument.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily fn} completion generation function, invoked in the context of command instance. Accepts parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} completion options~\newline
+ It can return promise or any other value treated as result.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+end}}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Finish chain for current option and return parent command instance.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Cmd} {\ttfamily parent} command 
+\end{DoxyReturn}
+}}}}}}}}}}}
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/script/node\+\_\+modules/coa/\mbox{\hyperlink{node__modules_2coa_2_r_e_a_d_m_e_8md}{R\+E\+A\+D\+M\+E.\+md}}\end{DoxyCompactItemize}

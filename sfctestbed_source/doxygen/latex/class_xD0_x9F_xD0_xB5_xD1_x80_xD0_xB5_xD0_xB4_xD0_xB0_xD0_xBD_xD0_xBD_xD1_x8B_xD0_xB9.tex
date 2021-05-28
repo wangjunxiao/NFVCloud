@@ -1,0 +1,264 @@
+\hypertarget{class_xD0_x9F_xD0_xB5_xD1_x80_xD0_xB5_xD0_xB4_xD0_xB0_xD0_xBD_xD0_xBD_xD1_x8B_xD0_xB9}{}\section{Переданный类 参考}
+\label{class_xD0_x9F_xD0_xB5_xD1_x80_xD0_xB5_xD0_xB4_xD0_xB0_xD0_xBD_xD0_xBD_xD1_x8B_xD0_xB9}\index{Переданный@{Переданный}}
+
+
+\subsection{详细描述}
+\subparagraph*{Opt.\+name}
+
+Определяет канонический идентификатор параметра, используемый в вызовах A\+PI.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+name} имя параметра~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+title}
+
+Определяет описание для параметра, используемое в текстовых сообщениях.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+title} название параметра~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+short}
+
+Назначает ключ для короткого имени параметра, передаваемого из командной строки с одинарным дефисом (например, {\ttfamily -\/v}).~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+short}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+long}
+
+Назначает ключ для длинного имени параметра, передаваемого из командной строки с двойным дефисом (например, {\ttfamily -\/-\/version}).~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+long}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+flag}
+
+Помечает параметр как логический, т.\+е. параметр не имеющий значения.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+arr}}
+
+{\bfseries  Помечает параметр как принимающий множественные значения.~\newline
+ Иначе будет использовано последнее переданное значение параметра.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+req}}}
+
+{\bfseries {\bfseries  Помечает параметр как обязательный.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+only}}}}
+
+{\bfseries {\bfseries {\bfseries  Интерпретирует параметр как команду, т.\+е. программа будет завершена сразу после выполнения параметра.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+val}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Назначает функцию валидации (или трансформации значения) для значения параметра.~\newline
+ Значение, полученное из командной строки, передается в функцию-\/валидатор прежде чем оно станет доступно из A\+PI.~\newline
+ Используется для валидации и трансформации введенных данных.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily \+\_\+val} функция валидации, исполняемая в контексте экземпляра параметра и принимающая в качестве единственного параметра значение, полученное из командной строки~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+def}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Назначает значение параметра по умолчанию. Это значение также передается в функцию валидации как обычное значение.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+input}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries  Помечает параметр как принимающий ввод пользователя. ~\newline
+ Позволяет использовать валидацию для S\+T\+D\+IN.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+$\ast$\{C\+O\+A.\+Opt\}$\ast$ {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+output}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Помечает параметр как вывод.~\newline
+ Позволяет использовать валидацию для S\+T\+D\+O\+UT.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+act}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Добавляет (или создает) действие для текущего параметра команды. Это действие будет выполнено, если текущий параметр есть в списке полученных параметров (с любым значением).~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily act} функция, выполняемая в контексте экземпляра текущей команды и принимающая следующие параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры команды~\newline
+
+\item {\itshape Array} {\ttfamily args} аргументы команды~\newline
+
+\item {\itshape Object} {\ttfamily res} объект-\/аккумулятор результатов~\newline
+ Функция может вернуть проваленный промис из Cmd.\+reject (в случае ошибки) или любое другое значение, рассматриваемое как результат.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+comp}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Назначает кастомную функцию автодополнения для текущей команды.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily fn} функция-\/генератор автодоплнения, исполняемая в контексте экземпляра команды. Принимает параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры автодополнения~\newline
+ Может возвращать промис или любое другое значение, рассматриваемое как результат исполнения команды.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Opt.\+end}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Завершает цепочку методов текущего параметра и возвращает экземпляр родительской команды.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Cmd} {\ttfamily parent} родительская команда
+\end{DoxyReturn}
+\paragraph*{Arg}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Аргумент — неименованная сущность.~\newline
+ Аргументы передаются из командной строки как список неименованных значений.}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries \subparagraph*{Arg.\+name}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Определяет канонический идентификатор аргумента, используемый в вызовах A\+PI.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+name} имя аргумента~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+title}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Определяет описание для аргумента, используемое в текстовых сообщениях.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape String} {\ttfamily \+\_\+title} описание аргумента~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+arr}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Помечает аргумент как принимающий множественные значения.~\newline
+ Иначе будет использовано последнее переданное значение аргумента.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+req}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Помечает аргумент как обязательный.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+val}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Назначает функцию валидации (или трансформации значения) для аргумента.~\newline
+ Значение, полученное из командной строки, передается в функцию-\/валидатор прежде чем оно станет доступно из A\+PI.~\newline
+ Используется для валидации и трансформации введенных данных.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily \+\_\+val} функция валидации, исполняемая в контексте экземпляра аргумента и принимающая в качестве единственного параметра значение, полученное из командной строки~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Opt} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+def}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Назначает дефолтное значение для аргумента. Дефолтное значение передается в функцию валидации как обычное значение.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries }\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+output}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Помечает параметр как вывод.~\newline
+ Позволяет назначить валидацию для S\+T\+D\+O\+UT.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+comp}}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Назначает кастомную функцию автодополнения для текущего аргумента.~\newline
+ $\ast$$\ast$
+\begin{DoxyParams}{参数}
+{\em $\ast$$\ast$} & {\itshape Function} {\ttfamily fn} функция-\/генератор автодоплнения, исполняемая в контексте текущей команды. Принимает параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры Может возвращать промис или любое другое значение, рассматриваемое как результат исполнения команды.~\newline
+ {\bfseries }
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\bfseries } {\itshape C\+O\+A.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+\subparagraph*{Arg.\+end}}}}}}}}}}}
+
+{\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries {\bfseries  Завершает цепочку методов текущего аргумента и возвращает экземпляр родительской команды.~\newline
+ {\bfseries \begin{DoxyReturn}{返回}
+{\itshape C\+O\+A.\+Cmd} {\ttfamily parent} родительская команда 
+\end{DoxyReturn}
+}}}}}}}}}}}
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/script/node\+\_\+modules/coa/\mbox{\hyperlink{coa_2_r_e_a_d_m_e_8ru_8md}{R\+E\+A\+D\+M\+E.\+ru.\+md}}\end{DoxyCompactItemize}

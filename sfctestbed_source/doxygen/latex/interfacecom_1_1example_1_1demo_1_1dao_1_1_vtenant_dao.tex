@@ -1,0 +1,79 @@
+\hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao}{}\section{com.\+example.\+demo.\+dao.\+Vtenant\+Dao类 参考}
+\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao}\index{com.\+example.\+demo.\+dao.\+Vtenant\+Dao@{com.\+example.\+demo.\+dao.\+Vtenant\+Dao}}
+
+
+封装了针对\+Vtenant实体的数据库操作  
+
+
+类 com.\+example.\+demo.\+dao.\+Vtenant\+Dao 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_vtenant}{Vtenant}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_accfcbdd7bf6ae1be3eb8cf1eed105f53}{find\+By\+Tenant\+Name\+And\+Tenant\+Password}} (String tenant\+Name, String tenant\+Password)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_vtenant}{Vtenant}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_ab54bf8af5292a2066660fd3a1855ed4a}{find\+Bytenant\+Id}} (Integer tenant\+Id)
+\item 
+void \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_a138c95ae4a3818066257b86ea5422533}{delete\+Bytenant\+Id}} (Integer tenant\+Id)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+封装了针对\+Vtenant实体的数据库操作 
+
+\begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_a138c95ae4a3818066257b86ea5422533}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_a138c95ae4a3818066257b86ea5422533}} 
+\index{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}!delete\+Bytenant\+Id@{delete\+Bytenant\+Id}}
+\index{delete\+Bytenant\+Id@{delete\+Bytenant\+Id}!com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}}
+\subsubsection{\texorpdfstring{delete\+Bytenant\+Id()}{deleteBytenantId()}}
+{\footnotesize\ttfamily void com.\+example.\+demo.\+dao.\+Vtenant\+Dao.\+delete\+Bytenant\+Id (\begin{DoxyParamCaption}\item[{Integer}]{tenant\+Id }\end{DoxyParamCaption})}
+
+使用tenant\+Id进行\+Vtenant的删除操作 
+\begin{DoxyParams}{参数}
+{\em tenant\+Id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_ab54bf8af5292a2066660fd3a1855ed4a}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_ab54bf8af5292a2066660fd3a1855ed4a}} 
+\index{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}!find\+Bytenant\+Id@{find\+Bytenant\+Id}}
+\index{find\+Bytenant\+Id@{find\+Bytenant\+Id}!com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bytenant\+Id()}{findBytenantId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_vtenant}{Vtenant}} com.\+example.\+demo.\+dao.\+Vtenant\+Dao.\+find\+Bytenant\+Id (\begin{DoxyParamCaption}\item[{Integer}]{tenant\+Id }\end{DoxyParamCaption})}
+
+使用tenant\+Id进行\+Vtenant的查询操作 
+\begin{DoxyParams}{参数}
+{\em tenant\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的\+Vtenant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_accfcbdd7bf6ae1be3eb8cf1eed105f53}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_vtenant_dao_accfcbdd7bf6ae1be3eb8cf1eed105f53}} 
+\index{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}!find\+By\+Tenant\+Name\+And\+Tenant\+Password@{find\+By\+Tenant\+Name\+And\+Tenant\+Password}}
+\index{find\+By\+Tenant\+Name\+And\+Tenant\+Password@{find\+By\+Tenant\+Name\+And\+Tenant\+Password}!com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao@{com\+::example\+::demo\+::dao\+::\+Vtenant\+Dao}}
+\subsubsection{\texorpdfstring{find\+By\+Tenant\+Name\+And\+Tenant\+Password()}{findByTenantNameAndTenantPassword()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_vtenant}{Vtenant}} com.\+example.\+demo.\+dao.\+Vtenant\+Dao.\+find\+By\+Tenant\+Name\+And\+Tenant\+Password (\begin{DoxyParamCaption}\item[{String}]{tenant\+Name,  }\item[{String}]{tenant\+Password }\end{DoxyParamCaption})}
+
+使用tenant\+Name和tenant\+Password进行vtenant的查询操作 
+\begin{DoxyParams}{参数}
+{\em tenant\+Name} & \\
+\hline
+{\em tenant\+Password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回查询到的\+Vtenant 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/dao/\mbox{\hyperlink{_vtenant_dao_8java}{Vtenant\+Dao.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{socketmodule_8h}{}\section{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/socketmodule.h 文件参考}
+\label{socketmodule_8h}\index{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/socketmodule.\+h@{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/socketmodule.\+h}}
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionsock__addr}{sock\+\_\+addr}}
+\item 
+struct \mbox{\hyperlink{struct_py_socket_sock_object}{Py\+Socket\+Sock\+Object}}
+\item 
+struct \mbox{\hyperlink{struct_py_socket_module___a_p_i_object}{Py\+Socket\+Module\+\_\+\+A\+P\+I\+Object}}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{socketmodule_8h_a104ddb0d43e49a68654828ae464a3a72}{Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{socketmodule_8h_aef695ef5e5c40352a6ad0904ae613991}{Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME}}~\char`\"{}\+\_\+socket\char`\"{}
+\item 
+\#define \mbox{\hyperlink{socketmodule_8h_ad3aef4d40faa36eeeba86a5c38a5b577}{Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME}}~\char`\"{}C\+A\+PI\char`\"{}
+\item 
+\#define \mbox{\hyperlink{socketmodule_8h_acfd1913c263a07aacce01ee0f049bce8}{S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T}}~S\+I\+Z\+E\+O\+F\+\_\+\+I\+NT
+\item 
+\#define \mbox{\hyperlink{socketmodule_8h_ab2759269c92e6d05675a698378dac492}{D\+P\+R\+I\+N\+TF}}~if (0) printf
+\end{DoxyCompactItemize}
+\subsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{socketmodule_8h_a6d6654fe512b6aa06d63667475d56ed7}{S\+O\+C\+K\+E\+T\+\_\+T}}
+\item 
+typedef union \mbox{\hyperlink{unionsock__addr}{sock\+\_\+addr}} \mbox{\hyperlink{socketmodule_8h_af4fb5df40e914a4c55a421b7af4bae4f}{sock\+\_\+addr\+\_\+t}}
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{socketmodule_8h_ab2759269c92e6d05675a698378dac492}\label{socketmodule_8h_ab2759269c92e6d05675a698378dac492}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!D\+P\+R\+I\+N\+TF@{D\+P\+R\+I\+N\+TF}}
+\index{D\+P\+R\+I\+N\+TF@{D\+P\+R\+I\+N\+TF}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{D\+P\+R\+I\+N\+TF}{DPRINTF}}
+{\footnotesize\ttfamily \#define D\+P\+R\+I\+N\+TF~if (0) printf}
+
+\mbox{\Hypertarget{socketmodule_8h_a104ddb0d43e49a68654828ae464a3a72}\label{socketmodule_8h_a104ddb0d43e49a68654828ae464a3a72}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H@{Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}}
+\index{Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H@{Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}{Py\_\_SOCKET\_H}}
+{\footnotesize\ttfamily \#define Py\+\_\+\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}
+
+\mbox{\Hypertarget{socketmodule_8h_ad3aef4d40faa36eeeba86a5c38a5b577}\label{socketmodule_8h_ad3aef4d40faa36eeeba86a5c38a5b577}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME@{Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME}}
+\index{Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME@{Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME}{PySocket\_CAPI\_NAME}}
+{\footnotesize\ttfamily \#define Py\+Socket\+\_\+\+C\+A\+P\+I\+\_\+\+N\+A\+ME~\char`\"{}C\+A\+PI\char`\"{}}
+
+\mbox{\Hypertarget{socketmodule_8h_aef695ef5e5c40352a6ad0904ae613991}\label{socketmodule_8h_aef695ef5e5c40352a6ad0904ae613991}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME@{Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME}}
+\index{Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME@{Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME}{PySocket\_MODULE\_NAME}}
+{\footnotesize\ttfamily \#define Py\+Socket\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}\+\_\+socket\char`\"{}}
+
+\mbox{\Hypertarget{socketmodule_8h_acfd1913c263a07aacce01ee0f049bce8}\label{socketmodule_8h_acfd1913c263a07aacce01ee0f049bce8}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T@{S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T}}
+\index{S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T@{S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T}{SIZEOF\_SOCKET\_T}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+O\+F\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+T~S\+I\+Z\+E\+O\+F\+\_\+\+I\+NT}
+
+
+
+\subsection{类型定义说明}
+\mbox{\Hypertarget{socketmodule_8h_af4fb5df40e914a4c55a421b7af4bae4f}\label{socketmodule_8h_af4fb5df40e914a4c55a421b7af4bae4f}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!sock\+\_\+addr\+\_\+t@{sock\+\_\+addr\+\_\+t}}
+\index{sock\+\_\+addr\+\_\+t@{sock\+\_\+addr\+\_\+t}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{sock\+\_\+addr\+\_\+t}{sock\_addr\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{unionsock__addr}{sock\+\_\+addr}}  \mbox{\hyperlink{socketmodule_8h_af4fb5df40e914a4c55a421b7af4bae4f}{sock\+\_\+addr\+\_\+t}}}
+
+\mbox{\Hypertarget{socketmodule_8h_a6d6654fe512b6aa06d63667475d56ed7}\label{socketmodule_8h_a6d6654fe512b6aa06d63667475d56ed7}} 
+\index{socketmodule.\+h@{socketmodule.\+h}!S\+O\+C\+K\+E\+T\+\_\+T@{S\+O\+C\+K\+E\+T\+\_\+T}}
+\index{S\+O\+C\+K\+E\+T\+\_\+T@{S\+O\+C\+K\+E\+T\+\_\+T}!socketmodule.\+h@{socketmodule.\+h}}
+\subsubsection{\texorpdfstring{S\+O\+C\+K\+E\+T\+\_\+T}{SOCKET\_T}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{socketmodule_8h_a6d6654fe512b6aa06d63667475d56ed7}{S\+O\+C\+K\+E\+T\+\_\+T}}}
+

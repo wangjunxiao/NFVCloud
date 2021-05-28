@@ -1,0 +1,135 @@
+\hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao}{}\section{com.\+example.\+demo.\+dao.\+Stack\+Dao类 参考}
+\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao}\index{com.\+example.\+demo.\+dao.\+Stack\+Dao@{com.\+example.\+demo.\+dao.\+Stack\+Dao}}
+
+
+封装了针对\+Stack实体的数据库操作  
+
+
+类 com.\+example.\+demo.\+dao.\+Stack\+Dao 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a4f7310088b8fdccdcc0084d8f2f75a9e}{find\+Bystack\+Id}} (Integer stack\+Id)
+\item 
+void \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_aadaa710a46eff94a3a5a847ccce05f76}{delete\+Bystack\+Id}} (Integer stack\+Id)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} $>$ \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a507e96395060add288019cdc1a6e18b3}{find\+Bysfc\+Id}} (String sfc\+Id)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a6b21413e546df384f540a650c936f676}{find\+Byvnf\+Id}} (String vnf\+Id)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a33cc52a138be1713c465af88125ec410}{find\+Byvnf\+Name}} (String vnf\+Name, String sfc\+Id)
+\item 
+int \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_afe823d139ca863dcdf952bb7b4afa2d2}{update\+Stack}} (Integer stack\+Id, String stack\+Osid, String stack\+Name, String stack\+Status, String stack\+Ip)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+封装了针对\+Stack实体的数据库操作 
+
+\begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_aadaa710a46eff94a3a5a847ccce05f76}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_aadaa710a46eff94a3a5a847ccce05f76}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!delete\+Bystack\+Id@{delete\+Bystack\+Id}}
+\index{delete\+Bystack\+Id@{delete\+Bystack\+Id}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{delete\+Bystack\+Id()}{deleteBystackId()}}
+{\footnotesize\ttfamily void com.\+example.\+demo.\+dao.\+Stack\+Dao.\+delete\+Bystack\+Id (\begin{DoxyParamCaption}\item[{Integer}]{stack\+Id }\end{DoxyParamCaption})}
+
+使用stack\+Id进行stack的删除操作 
+\begin{DoxyParams}{参数}
+{\em stack\+Id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a507e96395060add288019cdc1a6e18b3}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a507e96395060add288019cdc1a6e18b3}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!find\+Bysfc\+Id@{find\+Bysfc\+Id}}
+\index{find\+Bysfc\+Id@{find\+Bysfc\+Id}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bysfc\+Id()}{findBysfcId()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}}$>$ com.\+example.\+demo.\+dao.\+Stack\+Dao.\+find\+Bysfc\+Id (\begin{DoxyParamCaption}\item[{String}]{sfc\+Id }\end{DoxyParamCaption})}
+
+使用sfc\+Id查询所有的\+Stack（属于该\+Sfc的stack） 
+\begin{DoxyParams}{参数}
+{\em sfc\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的所有stack的列表 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a4f7310088b8fdccdcc0084d8f2f75a9e}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a4f7310088b8fdccdcc0084d8f2f75a9e}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!find\+Bystack\+Id@{find\+Bystack\+Id}}
+\index{find\+Bystack\+Id@{find\+Bystack\+Id}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bystack\+Id()}{findBystackId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} com.\+example.\+demo.\+dao.\+Stack\+Dao.\+find\+Bystack\+Id (\begin{DoxyParamCaption}\item[{Integer}]{stack\+Id }\end{DoxyParamCaption})}
+
+使用stack\+Id进行\+Stack的查询操作 
+\begin{DoxyParams}{参数}
+{\em stack\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a6b21413e546df384f540a650c936f676}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a6b21413e546df384f540a650c936f676}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!find\+Byvnf\+Id@{find\+Byvnf\+Id}}
+\index{find\+Byvnf\+Id@{find\+Byvnf\+Id}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{find\+Byvnf\+Id()}{findByvnfId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} com.\+example.\+demo.\+dao.\+Stack\+Dao.\+find\+Byvnf\+Id (\begin{DoxyParamCaption}\item[{String}]{vnf\+Id }\end{DoxyParamCaption})}
+
+使用\+V\+N\+F\+Id进行stack的查询操作 
+\begin{DoxyParams}{参数}
+{\em vnf\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的\+Stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a33cc52a138be1713c465af88125ec410}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_a33cc52a138be1713c465af88125ec410}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!find\+Byvnf\+Name@{find\+Byvnf\+Name}}
+\index{find\+Byvnf\+Name@{find\+Byvnf\+Name}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{find\+Byvnf\+Name()}{findByvnfName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_stack}{Stack}} com.\+example.\+demo.\+dao.\+Stack\+Dao.\+find\+Byvnf\+Name (\begin{DoxyParamCaption}\item[{String}]{vnf\+Name,  }\item[{String}]{sfc\+Id }\end{DoxyParamCaption})}
+
+使用\+Vnf\+Name和sfc\+Id进行stack的查询操作 
+\begin{DoxyParams}{参数}
+{\em vnf\+Name} & \\
+\hline
+{\em sfc\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_afe823d139ca863dcdf952bb7b4afa2d2}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_stack_dao_afe823d139ca863dcdf952bb7b4afa2d2}} 
+\index{com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}!update\+Stack@{update\+Stack}}
+\index{update\+Stack@{update\+Stack}!com\+::example\+::demo\+::dao\+::\+Stack\+Dao@{com\+::example\+::demo\+::dao\+::\+Stack\+Dao}}
+\subsubsection{\texorpdfstring{update\+Stack()}{updateStack()}}
+{\footnotesize\ttfamily int com.\+example.\+demo.\+dao.\+Stack\+Dao.\+update\+Stack (\begin{DoxyParamCaption}\item[{Integer}]{stack\+Id,  }\item[{String}]{stack\+Osid,  }\item[{String}]{stack\+Name,  }\item[{String}]{stack\+Status,  }\item[{String}]{stack\+Ip }\end{DoxyParamCaption})}
+
+使用stack\+Id、stack\+Osid、stack\+Name、stack\+Status、stack\+Ip进行stack的更新操作 
+\begin{DoxyParams}{参数}
+{\em stack\+Id} & \\
+\hline
+{\em stack\+Osid} & \\
+\hline
+{\em stack\+Name} & \\
+\hline
+{\em stack\+Status} & \\
+\hline
+{\em stack\+Ip} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+更新操作的结果，成功or失败 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/dao/\mbox{\hyperlink{_stack_dao_8java}{Stack\+Dao.\+java}}\end{DoxyCompactItemize}

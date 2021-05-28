@@ -1,0 +1,105 @@
+\hypertarget{namespaceforge_1_1ssl}{}\section{forge.\+ssl 命名空间参考}
+\label{namespaceforge_1_1ssl}\index{forge.\+ssl@{forge.\+ssl}}
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket}{S\+S\+L\+Socket}}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_a1cce48a9d7c26cd4e273e092e8a7e988}{wrap\+\_\+socket}} (sock, parent\+\_\+socket=None, keyfile=None, certfile=None, server\+\_\+side=False, cert\+\_\+reqs=C\+E\+R\+T\+\_\+\+N\+O\+NE, ssl\+\_\+version=P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+S\+Lv23, sess\+\_\+cache\+\_\+mode=S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER, sess\+\_\+id\+\_\+ctx=None, ca\+\_\+certs=None, do\+\_\+handshake\+\_\+on\+\_\+connect=True, suppress\+\_\+ragged\+\_\+eofs=True)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_ab72480f870ee3cb1c911d2d19a090908}{cert\+\_\+time\+\_\+to\+\_\+seconds}} (cert\+\_\+time)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_a55a2fe3d19271215dcab8f55dc6ac946}{D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert}} (der\+\_\+cert\+\_\+bytes)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_a34b5820befc677dcbed74bd790165cf9}{P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert}} (pem\+\_\+cert\+\_\+string)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_a41cd286f446f5c9233ef630eb8143ed9}{get\+\_\+server\+\_\+certificate}} (addr, ssl\+\_\+version=P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+S\+Lv3, ca\+\_\+certs=None)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_a90c00dd95b4b86d58bfe25634887ba33}{get\+\_\+protocol\+\_\+name}} (protocol\+\_\+code)
+\item 
+def \mbox{\hyperlink{namespaceforge_1_1ssl_af156eb492f2b672e7e030e7e3deb2024}{sslwrap\+\_\+simple}} (sock, keyfile=None, certfile=None)
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespaceforge_1_1ssl_a99dffc73bf2c64e8d1c46dac181f8ddf}{P\+E\+M\+\_\+\+H\+E\+A\+D\+ER}} = \char`\"{}-\/-\/-\/-\/-\/B\+E\+G\+IN C\+E\+R\+T\+I\+F\+I\+C\+A\+TE-\/-\/-\/-\/-\/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceforge_1_1ssl_a5ead7d8786c1664f8868104113740ba9}{P\+E\+M\+\_\+\+F\+O\+O\+T\+ER}} = \char`\"{}-\/-\/-\/-\/-\/E\+ND C\+E\+R\+T\+I\+F\+I\+C\+A\+TE-\/-\/-\/-\/-\/\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{namespaceforge_1_1ssl_ab72480f870ee3cb1c911d2d19a090908}\label{namespaceforge_1_1ssl_ab72480f870ee3cb1c911d2d19a090908}} 
+\index{forge\+::ssl@{forge\+::ssl}!cert\+\_\+time\+\_\+to\+\_\+seconds@{cert\+\_\+time\+\_\+to\+\_\+seconds}}
+\index{cert\+\_\+time\+\_\+to\+\_\+seconds@{cert\+\_\+time\+\_\+to\+\_\+seconds}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{cert\+\_\+time\+\_\+to\+\_\+seconds()}{cert\_time\_to\_seconds()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+cert\+\_\+time\+\_\+to\+\_\+seconds (\begin{DoxyParamCaption}\item[{}]{cert\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes a date-time string in standard ASN1_print form
+("MON DAY 24HOUR:MINUTE:SEC YEAR TIMEZONE") and return
+a Python time value in seconds past the epoch.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceforge_1_1ssl_a55a2fe3d19271215dcab8f55dc6ac946}\label{namespaceforge_1_1ssl_a55a2fe3d19271215dcab8f55dc6ac946}} 
+\index{forge\+::ssl@{forge\+::ssl}!D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert@{D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert}}
+\index{D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert@{D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert()}{DER\_cert\_to\_PEM\_cert()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+D\+E\+R\+\_\+cert\+\_\+to\+\_\+\+P\+E\+M\+\_\+cert (\begin{DoxyParamCaption}\item[{}]{der\+\_\+cert\+\_\+bytes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes a certificate in binary DER format and returns the
+PEM version of it as a string.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceforge_1_1ssl_a90c00dd95b4b86d58bfe25634887ba33}\label{namespaceforge_1_1ssl_a90c00dd95b4b86d58bfe25634887ba33}} 
+\index{forge\+::ssl@{forge\+::ssl}!get\+\_\+protocol\+\_\+name@{get\+\_\+protocol\+\_\+name}}
+\index{get\+\_\+protocol\+\_\+name@{get\+\_\+protocol\+\_\+name}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{get\+\_\+protocol\+\_\+name()}{get\_protocol\_name()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+get\+\_\+protocol\+\_\+name (\begin{DoxyParamCaption}\item[{}]{protocol\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceforge_1_1ssl_a41cd286f446f5c9233ef630eb8143ed9}\label{namespaceforge_1_1ssl_a41cd286f446f5c9233ef630eb8143ed9}} 
+\index{forge\+::ssl@{forge\+::ssl}!get\+\_\+server\+\_\+certificate@{get\+\_\+server\+\_\+certificate}}
+\index{get\+\_\+server\+\_\+certificate@{get\+\_\+server\+\_\+certificate}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{get\+\_\+server\+\_\+certificate()}{get\_server\_certificate()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+get\+\_\+server\+\_\+certificate (\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{ssl\+\_\+version = {\ttfamily PROTOCOL\+\_\+SSLv3},  }\item[{}]{ca\+\_\+certs = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve the certificate from the server at the specified address,
+and return it as a PEM-encoded string.
+If 'ca_certs' is specified, validate the server cert against it.
+If 'ssl_version' is specified, use it in the connection attempt.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceforge_1_1ssl_a34b5820befc677dcbed74bd790165cf9}\label{namespaceforge_1_1ssl_a34b5820befc677dcbed74bd790165cf9}} 
+\index{forge\+::ssl@{forge\+::ssl}!P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert@{P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert}}
+\index{P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert@{P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert()}{PEM\_cert\_to\_DER\_cert()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+P\+E\+M\+\_\+cert\+\_\+to\+\_\+\+D\+E\+R\+\_\+cert (\begin{DoxyParamCaption}\item[{}]{pem\+\_\+cert\+\_\+string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes a certificate in ASCII PEM format and returns the
+DER-encoded version of it as a byte sequence\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceforge_1_1ssl_af156eb492f2b672e7e030e7e3deb2024}\label{namespaceforge_1_1ssl_af156eb492f2b672e7e030e7e3deb2024}} 
+\index{forge\+::ssl@{forge\+::ssl}!sslwrap\+\_\+simple@{sslwrap\+\_\+simple}}
+\index{sslwrap\+\_\+simple@{sslwrap\+\_\+simple}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{sslwrap\+\_\+simple()}{sslwrap\_simple()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+sslwrap\+\_\+simple (\begin{DoxyParamCaption}\item[{}]{sock,  }\item[{}]{keyfile = {\ttfamily None},  }\item[{}]{certfile = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A replacement for the old socket.ssl function.  Designed
+for compability with Python 2.5 and earlier.  Will disappear in
+Python 3.0.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceforge_1_1ssl_a1cce48a9d7c26cd4e273e092e8a7e988}\label{namespaceforge_1_1ssl_a1cce48a9d7c26cd4e273e092e8a7e988}} 
+\index{forge\+::ssl@{forge\+::ssl}!wrap\+\_\+socket@{wrap\+\_\+socket}}
+\index{wrap\+\_\+socket@{wrap\+\_\+socket}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{wrap\+\_\+socket()}{wrap\_socket()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+wrap\+\_\+socket (\begin{DoxyParamCaption}\item[{}]{sock,  }\item[{}]{parent\+\_\+socket = {\ttfamily None},  }\item[{}]{keyfile = {\ttfamily None},  }\item[{}]{certfile = {\ttfamily None},  }\item[{}]{server\+\_\+side = {\ttfamily False},  }\item[{}]{cert\+\_\+reqs = {\ttfamily CERT\+\_\+NONE},  }\item[{}]{ssl\+\_\+version = {\ttfamily PROTOCOL\+\_\+SSLv23},  }\item[{}]{sess\+\_\+cache\+\_\+mode = {\ttfamily SESS\+\_\+CACHE\+\_\+SERVER},  }\item[{}]{sess\+\_\+id\+\_\+ctx = {\ttfamily None},  }\item[{}]{ca\+\_\+certs = {\ttfamily None},  }\item[{}]{do\+\_\+handshake\+\_\+on\+\_\+connect = {\ttfamily True},  }\item[{}]{suppress\+\_\+ragged\+\_\+eofs = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\subsection{变量说明}
+\mbox{\Hypertarget{namespaceforge_1_1ssl_a5ead7d8786c1664f8868104113740ba9}\label{namespaceforge_1_1ssl_a5ead7d8786c1664f8868104113740ba9}} 
+\index{forge\+::ssl@{forge\+::ssl}!P\+E\+M\+\_\+\+F\+O\+O\+T\+ER@{P\+E\+M\+\_\+\+F\+O\+O\+T\+ER}}
+\index{P\+E\+M\+\_\+\+F\+O\+O\+T\+ER@{P\+E\+M\+\_\+\+F\+O\+O\+T\+ER}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{P\+E\+M\+\_\+\+F\+O\+O\+T\+ER}{PEM\_FOOTER}}
+{\footnotesize\ttfamily string forge.\+ssl.\+P\+E\+M\+\_\+\+F\+O\+O\+T\+ER = \char`\"{}-\/-\/-\/-\/-\/E\+ND C\+E\+R\+T\+I\+F\+I\+C\+A\+TE-\/-\/-\/-\/-\/\char`\"{}}
+
+\mbox{\Hypertarget{namespaceforge_1_1ssl_a99dffc73bf2c64e8d1c46dac181f8ddf}\label{namespaceforge_1_1ssl_a99dffc73bf2c64e8d1c46dac181f8ddf}} 
+\index{forge\+::ssl@{forge\+::ssl}!P\+E\+M\+\_\+\+H\+E\+A\+D\+ER@{P\+E\+M\+\_\+\+H\+E\+A\+D\+ER}}
+\index{P\+E\+M\+\_\+\+H\+E\+A\+D\+ER@{P\+E\+M\+\_\+\+H\+E\+A\+D\+ER}!forge\+::ssl@{forge\+::ssl}}
+\subsubsection{\texorpdfstring{P\+E\+M\+\_\+\+H\+E\+A\+D\+ER}{PEM\_HEADER}}
+{\footnotesize\ttfamily string forge.\+ssl.\+P\+E\+M\+\_\+\+H\+E\+A\+D\+ER = \char`\"{}-\/-\/-\/-\/-\/B\+E\+G\+IN C\+E\+R\+T\+I\+F\+I\+C\+A\+TE-\/-\/-\/-\/-\/\char`\"{}}
+

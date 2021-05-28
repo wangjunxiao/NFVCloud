@@ -1,0 +1,127 @@
+\hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao}{}\section{com.\+example.\+demo.\+dao.\+Sfc\+Dao类 参考}
+\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao}\index{com.\+example.\+demo.\+dao.\+Sfc\+Dao@{com.\+example.\+demo.\+dao.\+Sfc\+Dao}}
+
+
+封装了针对\+Sfc实例的数据库操作  
+
+
+类 com.\+example.\+demo.\+dao.\+Sfc\+Dao 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a96969784f7889c1b2d92c65f19c72e29}{find\+Bysfc\+Id}} (String sfc\+Id)
+\item 
+void \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a5a1c3c16057f3108203797450c591d66}{delete\+Bysfc\+Id}} (String sfc\+Id)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} $>$ \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a987b199bbc98d689334f362641b370de}{find\+Bylink\+Id}} (String link\+Id)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a575381c8310bd0ae19916906389f6ab0}{find\+By\+Instance\+Id}} (String Instance\+Id)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a8e5fd376717cd55f6b3ae8521dd34b3e}{find\+Bystack\+Id}} (Integer stack\+Id)
+\item 
+int \mbox{\hyperlink{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a6f67e6799aef631a64ed65763adc534f}{update\+Sfc}} (String sfc\+Id, String sfc\+Status)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+封装了针对\+Sfc实例的数据库操作 
+
+\begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a5a1c3c16057f3108203797450c591d66}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a5a1c3c16057f3108203797450c591d66}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!delete\+Bysfc\+Id@{delete\+Bysfc\+Id}}
+\index{delete\+Bysfc\+Id@{delete\+Bysfc\+Id}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{delete\+Bysfc\+Id()}{deleteBysfcId()}}
+{\footnotesize\ttfamily void com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+delete\+Bysfc\+Id (\begin{DoxyParamCaption}\item[{String}]{sfc\+Id }\end{DoxyParamCaption})}
+
+使用sfc\+Id进行sfc的删除操作 
+\begin{DoxyParams}{参数}
+{\em sfc\+Id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a575381c8310bd0ae19916906389f6ab0}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a575381c8310bd0ae19916906389f6ab0}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!find\+By\+Instance\+Id@{find\+By\+Instance\+Id}}
+\index{find\+By\+Instance\+Id@{find\+By\+Instance\+Id}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{find\+By\+Instance\+Id()}{findByInstanceId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+find\+By\+Instance\+Id (\begin{DoxyParamCaption}\item[{String}]{Instance\+Id }\end{DoxyParamCaption})}
+
+使用instance\+Id进行sfc的查询操作（该instance属于哪个sfc） 
+\begin{DoxyParams}{参数}
+{\em Instance\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的sfc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a987b199bbc98d689334f362641b370de}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a987b199bbc98d689334f362641b370de}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!find\+Bylink\+Id@{find\+Bylink\+Id}}
+\index{find\+Bylink\+Id@{find\+Bylink\+Id}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bylink\+Id()}{findBylinkId()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}}$>$ com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+find\+Bylink\+Id (\begin{DoxyParamCaption}\item[{String}]{link\+Id }\end{DoxyParamCaption})}
+
+使用link\+Id查询所有的\+Sfc 
+\begin{DoxyParams}{参数}
+{\em link\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的所有sfc的列表 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a96969784f7889c1b2d92c65f19c72e29}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a96969784f7889c1b2d92c65f19c72e29}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!find\+Bysfc\+Id@{find\+Bysfc\+Id}}
+\index{find\+Bysfc\+Id@{find\+Bysfc\+Id}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bysfc\+Id()}{findBysfcId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+find\+Bysfc\+Id (\begin{DoxyParamCaption}\item[{String}]{sfc\+Id }\end{DoxyParamCaption})}
+
+使用sfc\+Id进行sfc的查询操作 
+\begin{DoxyParams}{参数}
+{\em sfc\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的\+Sfc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a8e5fd376717cd55f6b3ae8521dd34b3e}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a8e5fd376717cd55f6b3ae8521dd34b3e}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!find\+Bystack\+Id@{find\+Bystack\+Id}}
+\index{find\+Bystack\+Id@{find\+Bystack\+Id}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{find\+Bystack\+Id()}{findBystackId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1modular_1_1_sfc}{Sfc}} com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+find\+Bystack\+Id (\begin{DoxyParamCaption}\item[{Integer}]{stack\+Id }\end{DoxyParamCaption})}
+
+使用stack\+Id进行sfc的查询操作（该stack属于哪个sfc） 
+\begin{DoxyParams}{参数}
+{\em stack\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+查询到的sfc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a6f67e6799aef631a64ed65763adc534f}\label{interfacecom_1_1example_1_1demo_1_1dao_1_1_sfc_dao_a6f67e6799aef631a64ed65763adc534f}} 
+\index{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}!update\+Sfc@{update\+Sfc}}
+\index{update\+Sfc@{update\+Sfc}!com\+::example\+::demo\+::dao\+::\+Sfc\+Dao@{com\+::example\+::demo\+::dao\+::\+Sfc\+Dao}}
+\subsubsection{\texorpdfstring{update\+Sfc()}{updateSfc()}}
+{\footnotesize\ttfamily int com.\+example.\+demo.\+dao.\+Sfc\+Dao.\+update\+Sfc (\begin{DoxyParamCaption}\item[{String}]{sfc\+Id,  }\item[{String}]{sfc\+Status }\end{DoxyParamCaption})}
+
+使用sfc\+Id和sfc\+Status更新sfc的状态 
+\begin{DoxyParams}{参数}
+{\em sfc\+Id} & \\
+\hline
+{\em sfc\+Status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+更新操作的结果，成功or失败 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/dao/\mbox{\hyperlink{_sfc_dao_8java}{Sfc\+Dao.\+java}}\end{DoxyCompactItemize}

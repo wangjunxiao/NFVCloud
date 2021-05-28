@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>demo: Presents类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">demo
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">Vfunc Spring Boot项目概要</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Presents类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h4>Opt.name</h4>
+<p>Set a canonical option identifier to be used anywhere in the API.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_name</code> option name<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.title</h4>
+<p>Set a long description for option to be used anywhere in text messages.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_title</code> option title<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.short</h4>
+<p>Set a short key for option to be used with one hyphen from command line.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_short</code><br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.long</h4>
+<p>Set a short key for option to be used with double hyphens from command line.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_long</code><br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.flag</h4>
+<p>Make an option boolean, i.e. option without value.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.arr</h4>
+<p></b></p>
+<p><b> Makes an option accepts multiple values.<br />
+ Otherwise, the value will be used by the latter passed.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.req</h4>
+<p></b></b></p>
+<p><b><b> Makes an option req.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.only</h4>
+<p></b></b></b></p>
+<p><b><b><b> Makes an option to act as a command, i.e. program will exit just after option action.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.val</h4>
+<p></b></b></b></b></p>
+<p><b><b><b><b> Set a validation (or value) function for argument.<br />
+ Value from command line passes through before becoming available from API.<br />
+ Using for validation and convertion simple types to any values.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Function</em> <code>_val</code> validating function, invoked in the context of option instance and has one parameter with value from command line<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.def</h4>
+<p></b></b></b></b></p>
+<p><b><b><b><b> Set a default value for option. Default value passed through validation function as ordinary value.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Object</em> <code>_def</code><br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.input</h4>
+<p></b></b></b></b></p>
+<p><b><b><b><b> Make option value inputting stream. It's add useful validation and shortcut for STDIN. <b></p><dl class="section return"><dt>返回</dt><dd>*{COA.Opt}* <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.output</h4>
+<p></b></b></b></b></b></p>
+<p><b><b><b><b><b> Make option value outputing stream.<br />
+ It's add useful validation and shortcut for STDOUT.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.act</h4>
+<p></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b> Add action for current option command. This action is performed if the current option is present in parsed options (with any value).<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Function</em> <code>act</code> action function, invoked in the context of command instance and has the parameters:<br />
+<ul>
+<li><em>Object</em> <code>opts</code> parsed options<br />
+</li>
+<li><em>Array</em> <code>args</code> parsed arguments<br />
+</li>
+<li><em>Object</em> <code>res</code> actions result accumulator<br />
+ It can return rejected promise by Cmd.reject (in case of error) or any other value treated as result.<br />
+ <b></b></li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.comp</h4>
+<p></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b> Set custom additional completion for current option.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Function</em> <code>fn</code> completion generation function, invoked in the context of command instance. Accepts parameters:<br />
+<ul>
+<li><em>Object</em> <code>opts</code> completion options<br />
+ It can return promise or any other value treated as result.<br />
+ <b></b></li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Opt</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Opt.end</h4>
+<p></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b> Finish chain for current option and return parent command instance.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Cmd</em> <code>parent</code> command</dd></dl>
+<h3>Arg</h3>
+<p></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b> Argument is a unnamed entity.<br />
+ From command line arguments passed as list of unnamed values.</b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b></p><h4>Arg.name</h4>
+<p></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b> Set a canonical argument identifier to be used anywhere in text messages.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_name</code> argument name<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.title</h4>
+<p></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b> Set a long description for argument to be used anywhere in text messages.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>String</em> <code>_title</code> argument title<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.arr</h4>
+<p></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b> Makes an argument accepts multiple values.<br />
+ Otherwise, the value will be used by the latter passed.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.req</h4>
+<p></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b> Makes an argument req.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.val</h4>
+<p></b></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b><b> Set a validation (or value) function for argument.<br />
+ Value from command line passes through before becoming available from API.<br />
+ Using for validation and convertion simple types to any values.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Function</em> <code>_val</code> validating function, invoked in the context of argument instance and has one parameter with value from command line<br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.def</h4>
+<p></b></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b><b> Set a default value for argument. Default value passed through validation function as ordinary value.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Object</em> <code>_def</code><br />
+ <b></b></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.output</h4>
+<p></b></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b><b> Make argument value outputing stream.<br />
+ It's add useful validation and shortcut for STDOUT.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.comp</h4>
+<p></b></b></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b><b><b> Set custom additional completion for current argument.<br />
+ **</p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**</td><td><em>Function</em> <code>fn</code> completion generation function, invoked in the context of command instance. Accepts parameters:<br />
+<ul>
+<li><em>Object</em> <code>opts</code> completion options<br />
+ It can return promise or any other value treated as result.<br />
+ <b></b></li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><b></b> <em>COA.Arg</em> <code>this</code> instance (for chainability)</dd></dl>
+<h4>Arg.end</h4>
+<p></b></b></b></b></b></b></b></b></b></b></p>
+<p><b><b><b><b><b><b><b><b><b><b> Finish chain for current option and return parent command instance.<br />
+ <b></p><dl class="section return"><dt>返回</dt><dd><em>COA.Cmd</em> <code>parent</code> command </dd></dl>
+<p></b></b></b></b></b></b></b></b></b></b></b></p>
+</div><hr/>该类的文档由以下文件生成:<ul>
+<li>C:/workspace/demo/src/main/script/node_modules/coa/<a class="el" href="node__modules_2coa_2_r_e_a_d_m_e_8md.html">README.md</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

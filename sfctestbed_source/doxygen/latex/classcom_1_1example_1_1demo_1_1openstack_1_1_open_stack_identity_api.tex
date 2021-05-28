@@ -1,0 +1,108 @@
+\hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api}{}\section{com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api类 参考}
+\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api}\index{com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api@{com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api}}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6b11a2ca8d75bca2def8435054d9c301}{create\+Token}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_ad6b24aa89347255e2ef14645c06fa235}{validate\+Token}} (String head)
+\end{DoxyCompactItemize}
+\subsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ac4abdfb59239d67e9d7cd41b60ab9c}{get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}} ()
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_aaa4211a17762daee7e8506d7764e1636}{set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}} (String h\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME)
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ea5b9ebdaaf0582a77c9c47a7374c68}{get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}} ()
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a03a0a98fa923b8269fdef59613b4d72a}{set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}} (String h\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE)
+\end{DoxyCompactItemize}
+\subsection*{静态 Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_abbee46dce4c997f2629a0dd848fdef57}{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}} = \char`\"{}X-\/Auth-\/Token\char`\"{}
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a21b22f9929fe4694ef5d642087a52cdf}{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+final Logger \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a09bf6ff77086fea2a5c05dcb7694b33a}{logger}} = Logger\+Factory.\+get\+Logger(this.\+get\+Class())
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+封装了\+Open\+Stack keystone的api，用于向\+Open\+Stack取得认证 \begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6b11a2ca8d75bca2def8435054d9c301}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6b11a2ca8d75bca2def8435054d9c301}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!create\+Token@{create\+Token}}
+\index{create\+Token@{create\+Token}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{create\+Token()}{createToken()}}
+{\footnotesize\ttfamily void com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+create\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+构造访问\+Open\+Stack的\+Token \mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ac4abdfb59239d67e9d7cd41b60ab9c}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ac4abdfb59239d67e9d7cd41b60ab9c}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}}
+\index{get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+M\+E()}{getHEADER\_NAME()}}
+{\footnotesize\ttfamily static String com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+get\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ea5b9ebdaaf0582a77c9c47a7374c68}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a6ea5b9ebdaaf0582a77c9c47a7374c68}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}}
+\index{get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E()}{getHEADER\_VALUE()}}
+{\footnotesize\ttfamily static String com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+get\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_aaa4211a17762daee7e8506d7764e1636}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_aaa4211a17762daee7e8506d7764e1636}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}}
+\index{set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+M\+E()}{setHEADER\_NAME()}}
+{\footnotesize\ttfamily static void com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+set\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME (\begin{DoxyParamCaption}\item[{String}]{h\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a03a0a98fa923b8269fdef59613b4d72a}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a03a0a98fa923b8269fdef59613b4d72a}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}}
+\index{set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E()}{setHEADER\_VALUE()}}
+{\footnotesize\ttfamily static void com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+set\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE (\begin{DoxyParamCaption}\item[{String}]{h\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_ad6b24aa89347255e2ef14645c06fa235}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_ad6b24aa89347255e2ef14645c06fa235}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!validate\+Token@{validate\+Token}}
+\index{validate\+Token@{validate\+Token}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{validate\+Token()}{validateToken()}}
+{\footnotesize\ttfamily void com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+validate\+Token (\begin{DoxyParamCaption}\item[{String}]{head }\end{DoxyParamCaption})}
+
+对\+Token进行认证 
+\begin{DoxyParams}{参数}
+{\em head} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_abbee46dce4c997f2629a0dd848fdef57}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_abbee46dce4c997f2629a0dd848fdef57}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}}
+\index{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME@{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME}{HEADER\_NAME}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+ME = \char`\"{}X-\/Auth-\/Token\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a21b22f9929fe4694ef5d642087a52cdf}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a21b22f9929fe4694ef5d642087a52cdf}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}}
+\index{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE@{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE}{HEADER\_VALUE}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+UE = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a09bf6ff77086fea2a5c05dcb7694b33a}\label{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_identity_api_a09bf6ff77086fea2a5c05dcb7694b33a}} 
+\index{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}!logger@{logger}}
+\index{logger@{logger}!com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api@{com\+::example\+::demo\+::openstack\+::\+Open\+Stack\+Identity\+Api}}
+\subsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily final Logger com.\+example.\+demo.\+openstack.\+Open\+Stack\+Identity\+Api.\+logger = Logger\+Factory.\+get\+Logger(this.\+get\+Class())\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/openstack/\mbox{\hyperlink{_open_stack_identity_api_8java}{Open\+Stack\+Identity\+Api.\+java}}\end{DoxyCompactItemize}

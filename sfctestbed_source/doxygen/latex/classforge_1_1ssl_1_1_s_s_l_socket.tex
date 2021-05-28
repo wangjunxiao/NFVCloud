@@ -1,0 +1,302 @@
+\hypertarget{classforge_1_1ssl_1_1_s_s_l_socket}{}\section{forge.\+ssl.\+S\+S\+L\+Socket类 参考}
+\label{classforge_1_1ssl_1_1_s_s_l_socket}\index{forge.\+ssl.\+S\+S\+L\+Socket@{forge.\+ssl.\+S\+S\+L\+Socket}}
+类 forge.\+ssl.\+S\+S\+L\+Socket 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforge_1_1ssl_1_1_s_s_l_socket}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a97e3b1a9ff4c70873287eae17a0acc3d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, parent\+\_\+socket, sock, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a95ee7412166c35665a476aa60222fe87}{keyfile}}=None, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a3562b6e1eadabd53356d211f7d03a039}{certfile}}=None, server\+\_\+side=False, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a1266c34b9e0b1493b2bfcb35bca71684}{cert\+\_\+reqs}}=C\+E\+R\+T\+\_\+\+N\+O\+NE, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0c5acb8e8e849a8cd4c58a68dee02824}{ssl\+\_\+version}}=P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+S\+Lv23, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0612d90ce68eacadf3741707d170e92f}{sess\+\_\+cache\+\_\+mode}}=S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a64b55ecae20d607f84c8fa64bca066ed}{sess\+\_\+id\+\_\+ctx}}=None, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a571438403f0b5c1d0a66c9e5729069bc}{ca\+\_\+certs}}=None, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a948ce27f6c3ae2b3d38745838899ca81}{do\+\_\+handshake\+\_\+on\+\_\+connect}}=True, \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a9c816a1e9249f9ddbe51e5c51a18a2f5}{suppress\+\_\+ragged\+\_\+eofs}}=True)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a144df4b280e6a4f0663a06482028e201}{read}} (self, len=1024)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a8e56598cdc86ce04148d15b75facafa7}{write}} (self, data)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a89c7514819f37d187aad23a85bc27948}{getpeercert}} (self, binary\+\_\+form=False)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_acb49d5aa36898812e7e9d58ced6227d8}{cipher}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a346fe65abfc6f15cf839c9936b81b0bc}{send}} (self, data, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a46696866abbec255f2b9b85eb7461a13}{sendto}} (self, data, addr, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a33f13aabe22d097cd72825b1e8b07aeb}{sendall}} (self, data, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a94636100b76ef75be8f44a82bce063f1}{recv}} (self, buflen=1024, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0d58a08ffcecf65e60beb9c40a9a03b2}{recv\+\_\+into}} (self, buffer, nbytes=None, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a7072b7194641fec3058cfd672c6e23b6}{recvfrom}} (self, addr, buflen=1024, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_acd2312d8e4b519fbb5d26fc17b8dfe8d}{recvfrom\+\_\+into}} (self, buffer, nbytes=None, flags=0)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0b6d75de12bff0e99387f6c320a4f80b}{pending}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a40639beecc18c90b8bbac43ec6252451}{unwrap}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a806970ebd19bc4e16374c377a3e7f4a2}{shutdown}} (self, how)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0931f143205a960d3f037491cea25513}{close}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_add93497ad9ad1614154f9eff518b2ef9}{do\+\_\+handshake}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_ad376e228d79f3f27d01436cc252e2bbf}{connect}} (self, addr)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_ad217f805c6b78779d7276b2309660bf4}{accept}} (self)
+\item 
+def \mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a837441ff1f9d4a42537e9948c1762b03}{makefile}} (self, mode=\textquotesingle{}r\textquotesingle{}, bufsize=-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a95ee7412166c35665a476aa60222fe87}{keyfile}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a3562b6e1eadabd53356d211f7d03a039}{certfile}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a1266c34b9e0b1493b2bfcb35bca71684}{cert\+\_\+reqs}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0c5acb8e8e849a8cd4c58a68dee02824}{ssl\+\_\+version}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a0612d90ce68eacadf3741707d170e92f}{sess\+\_\+cache\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a64b55ecae20d607f84c8fa64bca066ed}{sess\+\_\+id\+\_\+ctx}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a571438403f0b5c1d0a66c9e5729069bc}{ca\+\_\+certs}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a948ce27f6c3ae2b3d38745838899ca81}{do\+\_\+handshake\+\_\+on\+\_\+connect}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a9c816a1e9249f9ddbe51e5c51a18a2f5}{suppress\+\_\+ragged\+\_\+eofs}}
+\end{DoxyCompactItemize}
+\subsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a781132ee3186976abdaeacc9af6a7089}{\+\_\+sslobj}}
+\item 
+\mbox{\hyperlink{classforge_1_1ssl_1_1_s_s_l_socket_a7001ca3e27be7d121411911813f70a31}{\+\_\+makefile\+\_\+refs}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyVerb}This class implements a subtype of socket.socket that wraps
+the underlying OS socket in an SSL context when necessary, and
+provides read and write methods over that channel.\end{DoxyVerb}
+ 
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a97e3b1a9ff4c70873287eae17a0acc3d}\label{classforge_1_1ssl_1_1_s_s_l_socket_a97e3b1a9ff4c70873287eae17a0acc3d}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parent\+\_\+socket,  }\item[{}]{sock,  }\item[{}]{keyfile = {\ttfamily None},  }\item[{}]{certfile = {\ttfamily None},  }\item[{}]{server\+\_\+side = {\ttfamily False},  }\item[{}]{cert\+\_\+reqs = {\ttfamily CERT\+\_\+NONE},  }\item[{}]{ssl\+\_\+version = {\ttfamily PROTOCOL\+\_\+SSLv23},  }\item[{}]{sess\+\_\+cache\+\_\+mode = {\ttfamily SESS\+\_\+CACHE\+\_\+SERVER},  }\item[{}]{sess\+\_\+id\+\_\+ctx = {\ttfamily None},  }\item[{}]{ca\+\_\+certs = {\ttfamily None},  }\item[{}]{do\+\_\+handshake\+\_\+on\+\_\+connect = {\ttfamily True},  }\item[{}]{suppress\+\_\+ragged\+\_\+eofs = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_ad217f805c6b78779d7276b2309660bf4}\label{classforge_1_1ssl_1_1_s_s_l_socket_ad217f805c6b78779d7276b2309660bf4}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!accept@{accept}}
+\index{accept@{accept}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+accept (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Accepts a new connection from a remote client, and returns
+a tuple containing that new connection wrapped with a server-side
+SSL channel, and the address of the remote client.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_acb49d5aa36898812e7e9d58ced6227d8}\label{classforge_1_1ssl_1_1_s_s_l_socket_acb49d5aa36898812e7e9d58ced6227d8}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!cipher@{cipher}}
+\index{cipher@{cipher}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{cipher()}{cipher()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+cipher (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a0931f143205a960d3f037491cea25513}\label{classforge_1_1ssl_1_1_s_s_l_socket_a0931f143205a960d3f037491cea25513}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!close@{close}}
+\index{close@{close}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_ad376e228d79f3f27d01436cc252e2bbf}\label{classforge_1_1ssl_1_1_s_s_l_socket_ad376e228d79f3f27d01436cc252e2bbf}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!connect@{connect}}
+\index{connect@{connect}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+connect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{addr }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Connects to remote ADDR, and then wraps the connection in
+an SSL channel.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_add93497ad9ad1614154f9eff518b2ef9}\label{classforge_1_1ssl_1_1_s_s_l_socket_add93497ad9ad1614154f9eff518b2ef9}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!do\+\_\+handshake@{do\+\_\+handshake}}
+\index{do\+\_\+handshake@{do\+\_\+handshake}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{do\+\_\+handshake()}{do\_handshake()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+do\+\_\+handshake (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform a TLS/SSL handshake.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a89c7514819f37d187aad23a85bc27948}\label{classforge_1_1ssl_1_1_s_s_l_socket_a89c7514819f37d187aad23a85bc27948}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!getpeercert@{getpeercert}}
+\index{getpeercert@{getpeercert}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{getpeercert()}{getpeercert()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+getpeercert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{binary\+\_\+form = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a formatted version of the data in the
+certificate provided by the other end of the SSL channel.
+Return None if no certificate was provided, {} if a
+certificate was provided, but not validated.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a837441ff1f9d4a42537e9948c1762b03}\label{classforge_1_1ssl_1_1_s_s_l_socket_a837441ff1f9d4a42537e9948c1762b03}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!makefile@{makefile}}
+\index{makefile@{makefile}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{makefile()}{makefile()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+makefile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode = {\ttfamily \textquotesingle{}r\textquotesingle{}},  }\item[{}]{bufsize = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make and return a file-like object that
+works with the SSL connection.  Just use the code
+from the socket module.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a0b6d75de12bff0e99387f6c320a4f80b}\label{classforge_1_1ssl_1_1_s_s_l_socket_a0b6d75de12bff0e99387f6c320a4f80b}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!pending@{pending}}
+\index{pending@{pending}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{pending()}{pending()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+pending (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a144df4b280e6a4f0663a06482028e201}\label{classforge_1_1ssl_1_1_s_s_l_socket_a144df4b280e6a4f0663a06482028e201}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!read@{read}}
+\index{read@{read}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{len = {\ttfamily 1024} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read up to LEN bytes and return them.
+Return zero-length string on EOF.\end{DoxyVerb}
+ \mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a94636100b76ef75be8f44a82bce063f1}\label{classforge_1_1ssl_1_1_s_s_l_socket_a94636100b76ef75be8f44a82bce063f1}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!recv@{recv}}
+\index{recv@{recv}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+recv (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buflen = {\ttfamily 1024},  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a0d58a08ffcecf65e60beb9c40a9a03b2}\label{classforge_1_1ssl_1_1_s_s_l_socket_a0d58a08ffcecf65e60beb9c40a9a03b2}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!recv\+\_\+into@{recv\+\_\+into}}
+\index{recv\+\_\+into@{recv\+\_\+into}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{recv\+\_\+into()}{recv\_into()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+recv\+\_\+into (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buffer,  }\item[{}]{nbytes = {\ttfamily None},  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a7072b7194641fec3058cfd672c6e23b6}\label{classforge_1_1ssl_1_1_s_s_l_socket_a7072b7194641fec3058cfd672c6e23b6}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!recvfrom@{recvfrom}}
+\index{recvfrom@{recvfrom}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{recvfrom()}{recvfrom()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+recvfrom (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{addr,  }\item[{}]{buflen = {\ttfamily 1024},  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_acd2312d8e4b519fbb5d26fc17b8dfe8d}\label{classforge_1_1ssl_1_1_s_s_l_socket_acd2312d8e4b519fbb5d26fc17b8dfe8d}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!recvfrom\+\_\+into@{recvfrom\+\_\+into}}
+\index{recvfrom\+\_\+into@{recvfrom\+\_\+into}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{recvfrom\+\_\+into()}{recvfrom\_into()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+recvfrom\+\_\+into (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buffer,  }\item[{}]{nbytes = {\ttfamily None},  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a346fe65abfc6f15cf839c9936b81b0bc}\label{classforge_1_1ssl_1_1_s_s_l_socket_a346fe65abfc6f15cf839c9936b81b0bc}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!send@{send}}
+\index{send@{send}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a33f13aabe22d097cd72825b1e8b07aeb}\label{classforge_1_1ssl_1_1_s_s_l_socket_a33f13aabe22d097cd72825b1e8b07aeb}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!sendall@{sendall}}
+\index{sendall@{sendall}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{sendall()}{sendall()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+sendall (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a46696866abbec255f2b9b85eb7461a13}\label{classforge_1_1ssl_1_1_s_s_l_socket_a46696866abbec255f2b9b85eb7461a13}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!sendto@{sendto}}
+\index{sendto@{sendto}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{sendto()}{sendto()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+sendto (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{addr,  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a806970ebd19bc4e16374c377a3e7f4a2}\label{classforge_1_1ssl_1_1_s_s_l_socket_a806970ebd19bc4e16374c377a3e7f4a2}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+shutdown (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{how }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a40639beecc18c90b8bbac43ec6252451}\label{classforge_1_1ssl_1_1_s_s_l_socket_a40639beecc18c90b8bbac43ec6252451}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{unwrap()}{unwrap()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+unwrap (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a8e56598cdc86ce04148d15b75facafa7}\label{classforge_1_1ssl_1_1_s_s_l_socket_a8e56598cdc86ce04148d15b75facafa7}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!write@{write}}
+\index{write@{write}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def forge.\+ssl.\+S\+S\+L\+Socket.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Write DATA to the underlying SSL channel.  Returns
+number of bytes of DATA actually transmitted.\end{DoxyVerb}
+ 
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a7001ca3e27be7d121411911813f70a31}\label{classforge_1_1ssl_1_1_s_s_l_socket_a7001ca3e27be7d121411911813f70a31}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!\+\_\+makefile\+\_\+refs@{\+\_\+makefile\+\_\+refs}}
+\index{\+\_\+makefile\+\_\+refs@{\+\_\+makefile\+\_\+refs}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{\+\_\+makefile\+\_\+refs}{\_makefile\_refs}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+\_\+makefile\+\_\+refs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a781132ee3186976abdaeacc9af6a7089}\label{classforge_1_1ssl_1_1_s_s_l_socket_a781132ee3186976abdaeacc9af6a7089}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!\+\_\+sslobj@{\+\_\+sslobj}}
+\index{\+\_\+sslobj@{\+\_\+sslobj}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{\+\_\+sslobj}{\_sslobj}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+\_\+sslobj\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a571438403f0b5c1d0a66c9e5729069bc}\label{classforge_1_1ssl_1_1_s_s_l_socket_a571438403f0b5c1d0a66c9e5729069bc}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!ca\+\_\+certs@{ca\+\_\+certs}}
+\index{ca\+\_\+certs@{ca\+\_\+certs}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{ca\+\_\+certs}{ca\_certs}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+ca\+\_\+certs}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a1266c34b9e0b1493b2bfcb35bca71684}\label{classforge_1_1ssl_1_1_s_s_l_socket_a1266c34b9e0b1493b2bfcb35bca71684}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!cert\+\_\+reqs@{cert\+\_\+reqs}}
+\index{cert\+\_\+reqs@{cert\+\_\+reqs}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{cert\+\_\+reqs}{cert\_reqs}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+cert\+\_\+reqs}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a3562b6e1eadabd53356d211f7d03a039}\label{classforge_1_1ssl_1_1_s_s_l_socket_a3562b6e1eadabd53356d211f7d03a039}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!certfile@{certfile}}
+\index{certfile@{certfile}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{certfile}{certfile}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+certfile}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a948ce27f6c3ae2b3d38745838899ca81}\label{classforge_1_1ssl_1_1_s_s_l_socket_a948ce27f6c3ae2b3d38745838899ca81}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!do\+\_\+handshake\+\_\+on\+\_\+connect@{do\+\_\+handshake\+\_\+on\+\_\+connect}}
+\index{do\+\_\+handshake\+\_\+on\+\_\+connect@{do\+\_\+handshake\+\_\+on\+\_\+connect}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{do\+\_\+handshake\+\_\+on\+\_\+connect}{do\_handshake\_on\_connect}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+do\+\_\+handshake\+\_\+on\+\_\+connect}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a95ee7412166c35665a476aa60222fe87}\label{classforge_1_1ssl_1_1_s_s_l_socket_a95ee7412166c35665a476aa60222fe87}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!keyfile@{keyfile}}
+\index{keyfile@{keyfile}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{keyfile}{keyfile}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+keyfile}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a0612d90ce68eacadf3741707d170e92f}\label{classforge_1_1ssl_1_1_s_s_l_socket_a0612d90ce68eacadf3741707d170e92f}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!sess\+\_\+cache\+\_\+mode@{sess\+\_\+cache\+\_\+mode}}
+\index{sess\+\_\+cache\+\_\+mode@{sess\+\_\+cache\+\_\+mode}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{sess\+\_\+cache\+\_\+mode}{sess\_cache\_mode}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+sess\+\_\+cache\+\_\+mode}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a64b55ecae20d607f84c8fa64bca066ed}\label{classforge_1_1ssl_1_1_s_s_l_socket_a64b55ecae20d607f84c8fa64bca066ed}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!sess\+\_\+id\+\_\+ctx@{sess\+\_\+id\+\_\+ctx}}
+\index{sess\+\_\+id\+\_\+ctx@{sess\+\_\+id\+\_\+ctx}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{sess\+\_\+id\+\_\+ctx}{sess\_id\_ctx}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+sess\+\_\+id\+\_\+ctx}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a0c5acb8e8e849a8cd4c58a68dee02824}\label{classforge_1_1ssl_1_1_s_s_l_socket_a0c5acb8e8e849a8cd4c58a68dee02824}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!ssl\+\_\+version@{ssl\+\_\+version}}
+\index{ssl\+\_\+version@{ssl\+\_\+version}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{ssl\+\_\+version}{ssl\_version}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+ssl\+\_\+version}
+
+\mbox{\Hypertarget{classforge_1_1ssl_1_1_s_s_l_socket_a9c816a1e9249f9ddbe51e5c51a18a2f5}\label{classforge_1_1ssl_1_1_s_s_l_socket_a9c816a1e9249f9ddbe51e5c51a18a2f5}} 
+\index{forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}!suppress\+\_\+ragged\+\_\+eofs@{suppress\+\_\+ragged\+\_\+eofs}}
+\index{suppress\+\_\+ragged\+\_\+eofs@{suppress\+\_\+ragged\+\_\+eofs}!forge\+::ssl\+::\+S\+S\+L\+Socket@{forge\+::ssl\+::\+S\+S\+L\+Socket}}
+\subsubsection{\texorpdfstring{suppress\+\_\+ragged\+\_\+eofs}{suppress\_ragged\_eofs}}
+{\footnotesize\ttfamily forge.\+ssl.\+S\+S\+L\+Socket.\+suppress\+\_\+ragged\+\_\+eofs}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/\mbox{\hyperlink{ssl_8py}{ssl.\+py}}\end{DoxyCompactItemize}

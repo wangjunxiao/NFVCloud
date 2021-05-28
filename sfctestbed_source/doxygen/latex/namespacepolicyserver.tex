@@ -1,0 +1,68 @@
+\hypertarget{namespacepolicyserver}{}\section{policyserver 命名空间参考}
+\label{namespacepolicyserver}\index{policyserver@{policyserver}}
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpolicyserver_1_1_policy_handler}{Policy\+Handler}}
+\item 
+class \mbox{\hyperlink{classpolicyserver_1_1_threaded_t_c_p_server}{Threaded\+T\+C\+P\+Server}}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepolicyserver_ab37343f5b6097b691f5efd9ae45036e3}{main}} ()
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepolicyserver_aa784b6304155ce0934d42d59eee3578f}{allow\+\_\+reuse\+\_\+address}}
+\item 
+string \mbox{\hyperlink{namespacepolicyserver_a6a9b70cac80cf2d7fe69f6effc595f13}{socket\+\_\+policy\+\_\+file}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyVerb}Flash Socket Policy Server.
+
+- Starts Flash socket policy file server.
+- Defaults to port 843.
+- NOTE: Most operating systems require administrative privileges to use
+  ports under 1024.
+
+  $ ./policyserver.py [options]
+\end{DoxyVerb}
+ 
+
+\subsection{函数说明}
+\mbox{\Hypertarget{namespacepolicyserver_ab37343f5b6097b691f5efd9ae45036e3}\label{namespacepolicyserver_ab37343f5b6097b691f5efd9ae45036e3}} 
+\index{policyserver@{policyserver}!main@{main}}
+\index{main@{main}!policyserver@{policyserver}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def policyserver.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run socket policy file servers.\end{DoxyVerb}
+ 
+
+\subsection{变量说明}
+\mbox{\Hypertarget{namespacepolicyserver_aa784b6304155ce0934d42d59eee3578f}\label{namespacepolicyserver_aa784b6304155ce0934d42d59eee3578f}} 
+\index{policyserver@{policyserver}!allow\+\_\+reuse\+\_\+address@{allow\+\_\+reuse\+\_\+address}}
+\index{allow\+\_\+reuse\+\_\+address@{allow\+\_\+reuse\+\_\+address}!policyserver@{policyserver}}
+\subsubsection{\texorpdfstring{allow\+\_\+reuse\+\_\+address}{allow\_reuse\_address}}
+{\footnotesize\ttfamily policyserver.\+allow\+\_\+reuse\+\_\+address}
+
+\mbox{\Hypertarget{namespacepolicyserver_a6a9b70cac80cf2d7fe69f6effc595f13}\label{namespacepolicyserver_a6a9b70cac80cf2d7fe69f6effc595f13}} 
+\index{policyserver@{policyserver}!socket\+\_\+policy\+\_\+file@{socket\+\_\+policy\+\_\+file}}
+\index{socket\+\_\+policy\+\_\+file@{socket\+\_\+policy\+\_\+file}!policyserver@{policyserver}}
+\subsubsection{\texorpdfstring{socket\+\_\+policy\+\_\+file}{socket\_policy\_file}}
+{\footnotesize\ttfamily string policyserver.\+socket\+\_\+policy\+\_\+file}
+
+{\bfseries 初始值\+:}
+\begin{DoxyCode}
+1 =  \textcolor{stringliteral}{"""\(\backslash\)}
+2 \textcolor{stringliteral}{<?xml version="1.0"?>\(\backslash\)}
+3 \textcolor{stringliteral}{<!DOCTYPE cross-domain-policy\(\backslash\)}
+4 \textcolor{stringliteral}{ SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">\(\backslash\)}
+5 \textcolor{stringliteral}{<cross-domain-policy>\(\backslash\)}
+6 \textcolor{stringliteral}{<allow-access-from domain="*" to-ports="*"/>\(\backslash\)}
+7 \textcolor{stringliteral}{</cross-domain-policy>\(\backslash\)0"""}
+\end{DoxyCode}

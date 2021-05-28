@@ -1,0 +1,397 @@
+\hypertarget{__ssl_8c}{}\section{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/\+\_\+ssl.c 文件参考}
+\label{__ssl_8c}\index{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/\+\_\+ssl.\+c@{C\+:/workspace/demo/src/main/script/node\+\_\+modules/node-\/forge/tests/forge\+\_\+ssl/forge/\+\_\+ssl.\+c}}
+{\ttfamily \#include \char`\"{}Python.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}socketmodule.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/rsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/x509.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/x509v3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/pem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/ssl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/rand.\+h\char`\"{}}\newline
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_py_s_s_l_object}{Py\+S\+S\+L\+Object}}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_aff16d95e96aaead54a47563fd0380c61}{Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a0ed2e3a8256bb153555f2bde1ea18ecc}{Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_ab0304e6781778a4dd5403251a02bb497}{Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a4663c1b9039afb0ab0dbc844e83e974f}{Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_add7e443d6278e58a08d1e1449113d943}{X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN}}~256
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a83c0f6093edef5bd1cf6d30e3826f19b}{Py\+S\+S\+L\+Object\+\_\+\+Check}}(v)~(Py\+\_\+\+T\+Y\+PE(v) == \&Py\+S\+S\+L\+\_\+\+Type)
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_adb53d8268067abf9b372dffbb7a081db}{S\+T\+R\+I\+N\+G\+I\+F\+Y1}}(x)~\#x
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a41f0baf2fca639d9cb25be1b9e03e335}{S\+T\+R\+I\+N\+G\+I\+F\+Y2}}(x)~\mbox{\hyperlink{__ssl_8c_adb53d8268067abf9b372dffbb7a081db}{S\+T\+R\+I\+N\+G\+I\+F\+Y1}}(x)
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a3cc018f18f08b2d48026c00db008c482}{E\+R\+R\+S\+T\+R1}}(x,  y,  z)~(x \char`\"{}\+:\char`\"{} y \char`\"{}\+: \char`\"{} z)
+\item 
+\#define \mbox{\hyperlink{__ssl_8c_a6e9b2e771468730d529476cc4a5101f5}{E\+R\+R\+S\+TR}}(x)~\mbox{\hyperlink{__ssl_8c_a3cc018f18f08b2d48026c00db008c482}{E\+R\+R\+S\+T\+R1}}(\char`\"{}\+\_\+ssl.\+c\char`\"{}, S\+T\+R\+I\+N\+G\+I\+F\+Y2(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+), x)
+\end{DoxyCompactItemize}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80f}{py\+\_\+ssl\+\_\+error}} \{ \newline
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa6d02323f5fb134d8c61ef57d187c02ef}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa2dfa8d650454a5bc4a95922c0bd4ff7a}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa8c3c6f85e06dda879d6dd463aea91070}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fafa4a40506122125d639997b0626802bf}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE}}, 
+\newline
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa7412f2018a0c13b279daae6bc62e465d}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa138dda527b37afc1f7b21991360424d1}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa5a4abda68581fb13b598a792276d866d}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa198b679041770dd02c91e1c391b16a95}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT}}, 
+\newline
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fab6a03b9b25ac1692873877b4fd5fb9a8}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF}}, 
+\mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa993f999034f8187e656c8245b12b3c4b}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+ \}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_adf15365fae213d3b259edddb77fb5350}{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client}} \{ \mbox{\hyperlink{__ssl_8c_adf15365fae213d3b259edddb77fb5350a2f6c50437413045edb754f00ee166ff2}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT}}, 
+\mbox{\hyperlink{__ssl_8c_adf15365fae213d3b259edddb77fb5350a7f399f9847a2a36c74b8bb74abff3a70}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER}}
+ \}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_a525f28b2748a3797f9e37011b3189827}{py\+\_\+ssl\+\_\+cert\+\_\+requirements}} \{ \mbox{\hyperlink{__ssl_8c_a525f28b2748a3797f9e37011b3189827a5ae16370004d625cd02a867b0a86c92e}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{__ssl_8c_a525f28b2748a3797f9e37011b3189827a804a0041b4226b1de1d74159f247f1be}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}, 
+\mbox{\hyperlink{__ssl_8c_a525f28b2748a3797f9e37011b3189827a82404342e97dc0b7321e0791b43c0357}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED}}
+ \}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9f}{py\+\_\+ssl\+\_\+version}} \{ \mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa777363644f85e49d01cacf7414e74f84}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2}}, 
+\mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9faf24185be5b979ad101122520e773507a}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3}}, 
+\mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa76a64557e0db237dffe94de59f4feaa1}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23}}, 
+\mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fac5b235d1518ce22c2bd82bdb83caebb2}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1}}
+ \}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39a}{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode}} \{ \mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39aa824e90ff7fe684fe668f64bcdfcba7ec}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF}}, 
+\mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39aa3ff308386a688d936f0d757dc6714c6a}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT}}, 
+\mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39aa53afe3d974a6ff4f8831b694f98025a7}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER}}, 
+\mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39aaaf371b065aa4168434e0c161bdb3d6c5}{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH}}
+ \}
+\item 
+enum \mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591f}{timeout\+\_\+state}} \{ \newline
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591faaf69d5a28bc0f922138bb2697161597f}{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG}}, 
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591fa0c444d4eccb0e44d717cedc691d4ed6e}{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG}}, 
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591fa67b1236c1794df56d82593059c65131d}{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT}}, 
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591fa05bfb050091e6d3e7ba001475237f1fd}{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED}}, 
+\newline
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591faccbb6a16d75377a10304e5199193bf5f}{S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT}}, 
+\mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591fa1a611905db50848f6832210c535f8491}{S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{__ssl_8c_a91a34cfc488bd359ea7e6b4f163f8cf0}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (sslwrap\+\_\+doc, \char`\"{}sslwrap(socket, server\+\_\+side, \mbox{[}keyfile, certfile, certs\+\_\+mode, protocol,\textbackslash{} \char`\"{} sess\+\_\+cache\+\_\+mode, sess\+\_\+id\+\_\+ctx, cacertsfile\mbox{]}) -\/$>$ sslobject\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_ae57d87ae1ff0fd353a693df06fba2bb0}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+\+S\+S\+Lwrap\+\_\+accepted\+\_\+doc, \char`\"{}wrap\+\_\+accepted(socket) -\/$>$ sslobject\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_a02adc69115e81850704c34cfda2f5dfb}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+peercert\+\_\+doc, \char`\"{}peer\+\_\+certificate(\mbox{[}der=False\mbox{]}) -\/$>$ certificate\textbackslash{}\textbackslash{}\+Returns the certificate for the peer.  If no certificate was provided,\textbackslash{}returns None.  If a certificate was provided, but not validated, returns\textbackslash{}an empty dictionary.  Otherwise returns a dict containing information\textbackslash{}about the peer certificate.\textbackslash{}\textbackslash{}\+If the optional argument is True, returns a D\+ER-\/encoded copy of the\textbackslash{}peer certificate, or None if no certificate was provided.  This will\textbackslash{}return the certificate even if it wasn\textquotesingle{}t validated.\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_adca188335f6a8b785402b2d39317fdda}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+\+S\+S\+Lwrite\+\_\+doc, \char`\"{}write(s) -\/$>$ len\textbackslash{}\textbackslash{}\+Writes the string s into the S\+SL object.  Returns the number\textbackslash{}of bytes written.\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_a92a0bcecf091729b0951302c4b79e342}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+\+S\+S\+Lpending\+\_\+doc, \char`\"{}pending() -\/$>$ count\textbackslash{}\textbackslash{}\+Returns the number of already decrypted bytes available for read,\textbackslash{}pending on the connection.\textbackslash{})
+\item 
+\mbox{\hyperlink{__ssl_8c_ace37c5aca3a936d88c2309d42c501f7f}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+\+S\+S\+Lread\+\_\+doc, \char`\"{}read(\mbox{[}len\mbox{]}) -\/$>$ string\textbackslash{}\textbackslash{}\+Read up to len bytes from the S\+SL socket.\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_a3b4c5bbe3cba7770f76700978a17a848}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (Py\+S\+S\+L\+\_\+\+S\+S\+Lshutdown\+\_\+doc, \char`\"{}shutdown(s) -\/$>$ socket\textbackslash{}\textbackslash{}\+Does the S\+SL shutdown handshake with the remote end, and returns\textbackslash{}the underlying socket object.\char`\"{})
+\item 
+\mbox{\hyperlink{__ssl_8c_a22d24af157a72281c67be6e9810ccf0d}{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}} (module\+\_\+doc, \char`\"{}Implementation module for S\+SL socket operations.  See the socket module\textbackslash{}for documentation.\char`\"{})
+\item 
+Py\+M\+O\+D\+I\+N\+I\+T\+\_\+\+F\+U\+NC \mbox{\hyperlink{__ssl_8c_a3e884da4affb112307bb4faac4627f5e}{init\+\_\+forge\+\_\+ssl}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{__ssl_8c_a6e9b2e771468730d529476cc4a5101f5}\label{__ssl_8c_a6e9b2e771468730d529476cc4a5101f5}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!E\+R\+R\+S\+TR@{E\+R\+R\+S\+TR}}
+\index{E\+R\+R\+S\+TR@{E\+R\+R\+S\+TR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{E\+R\+R\+S\+TR}{ERRSTR}}
+{\footnotesize\ttfamily \#define E\+R\+R\+S\+TR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{__ssl_8c_a3cc018f18f08b2d48026c00db008c482}{E\+R\+R\+S\+T\+R1}}(\char`\"{}\+\_\+ssl.\+c\char`\"{}, S\+T\+R\+I\+N\+G\+I\+F\+Y2(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+), x)}
+
+\mbox{\Hypertarget{__ssl_8c_a3cc018f18f08b2d48026c00db008c482}\label{__ssl_8c_a3cc018f18f08b2d48026c00db008c482}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!E\+R\+R\+S\+T\+R1@{E\+R\+R\+S\+T\+R1}}
+\index{E\+R\+R\+S\+T\+R1@{E\+R\+R\+S\+T\+R1}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{E\+R\+R\+S\+T\+R1}{ERRSTR1}}
+{\footnotesize\ttfamily \#define E\+R\+R\+S\+T\+R1(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z }\end{DoxyParamCaption})~(x \char`\"{}\+:\char`\"{} y \char`\"{}\+: \char`\"{} z)}
+
+\mbox{\Hypertarget{__ssl_8c_aff16d95e96aaead54a47563fd0380c61}\label{__ssl_8c_aff16d95e96aaead54a47563fd0380c61}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}{PySSL\_BEGIN\_ALLOW\_THREADS}}
+{\footnotesize\ttfamily \#define Py\+S\+S\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}
+
+\mbox{\Hypertarget{__ssl_8c_a0ed2e3a8256bb153555f2bde1ea18ecc}\label{__ssl_8c_a0ed2e3a8256bb153555f2bde1ea18ecc}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}{PySSL\_BLOCK\_THREADS}}
+{\footnotesize\ttfamily \#define Py\+S\+S\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}
+
+\mbox{\Hypertarget{__ssl_8c_a4663c1b9039afb0ab0dbc844e83e974f}\label{__ssl_8c_a4663c1b9039afb0ab0dbc844e83e974f}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}{PySSL\_END\_ALLOW\_THREADS}}
+{\footnotesize\ttfamily \#define Py\+S\+S\+L\+\_\+\+E\+N\+D\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+H\+R\+E\+A\+DS}
+
+\mbox{\Hypertarget{__ssl_8c_ab0304e6781778a4dd5403251a02bb497}\label{__ssl_8c_ab0304e6781778a4dd5403251a02bb497}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS@{Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}{PySSL\_UNBLOCK\_THREADS}}
+{\footnotesize\ttfamily \#define Py\+S\+S\+L\+\_\+\+U\+N\+B\+L\+O\+C\+K\+\_\+\+T\+H\+R\+E\+A\+DS}
+
+\mbox{\Hypertarget{__ssl_8c_a83c0f6093edef5bd1cf6d30e3826f19b}\label{__ssl_8c_a83c0f6093edef5bd1cf6d30e3826f19b}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+S\+S\+L\+Object\+\_\+\+Check@{Py\+S\+S\+L\+Object\+\_\+\+Check}}
+\index{Py\+S\+S\+L\+Object\+\_\+\+Check@{Py\+S\+S\+L\+Object\+\_\+\+Check}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+S\+S\+L\+Object\+\_\+\+Check}{PySSLObject\_Check}}
+{\footnotesize\ttfamily \#define Py\+S\+S\+L\+Object\+\_\+\+Check(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~(Py\+\_\+\+T\+Y\+PE(v) == \&Py\+S\+S\+L\+\_\+\+Type)}
+
+\mbox{\Hypertarget{__ssl_8c_adb53d8268067abf9b372dffbb7a081db}\label{__ssl_8c_adb53d8268067abf9b372dffbb7a081db}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+T\+R\+I\+N\+G\+I\+F\+Y1@{S\+T\+R\+I\+N\+G\+I\+F\+Y1}}
+\index{S\+T\+R\+I\+N\+G\+I\+F\+Y1@{S\+T\+R\+I\+N\+G\+I\+F\+Y1}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+R\+I\+N\+G\+I\+F\+Y1}{STRINGIFY1}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+N\+G\+I\+F\+Y1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\#x}
+
+\mbox{\Hypertarget{__ssl_8c_a41f0baf2fca639d9cb25be1b9e03e335}\label{__ssl_8c_a41f0baf2fca639d9cb25be1b9e03e335}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+T\+R\+I\+N\+G\+I\+F\+Y2@{S\+T\+R\+I\+N\+G\+I\+F\+Y2}}
+\index{S\+T\+R\+I\+N\+G\+I\+F\+Y2@{S\+T\+R\+I\+N\+G\+I\+F\+Y2}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+R\+I\+N\+G\+I\+F\+Y2}{STRINGIFY2}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+N\+G\+I\+F\+Y2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{__ssl_8c_adb53d8268067abf9b372dffbb7a081db}{S\+T\+R\+I\+N\+G\+I\+F\+Y1}}(x)}
+
+\mbox{\Hypertarget{__ssl_8c_add7e443d6278e58a08d1e1449113d943}\label{__ssl_8c_add7e443d6278e58a08d1e1449113d943}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN@{X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN}}
+\index{X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN@{X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN}{X509\_NAME\_MAXLEN}}
+{\footnotesize\ttfamily \#define X509\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+L\+EN~256}
+
+
+
+\subsection{枚举类型说明}
+\mbox{\Hypertarget{__ssl_8c_a525f28b2748a3797f9e37011b3189827}\label{__ssl_8c_a525f28b2748a3797f9e37011b3189827}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!py\+\_\+ssl\+\_\+cert\+\_\+requirements@{py\+\_\+ssl\+\_\+cert\+\_\+requirements}}
+\index{py\+\_\+ssl\+\_\+cert\+\_\+requirements@{py\+\_\+ssl\+\_\+cert\+\_\+requirements}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{py\+\_\+ssl\+\_\+cert\+\_\+requirements}{py\_ssl\_cert\_requirements}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_a525f28b2748a3797f9e37011b3189827}{py\+\_\+ssl\+\_\+cert\+\_\+requirements}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{__ssl_8c_a525f28b2748a3797f9e37011b3189827a5ae16370004d625cd02a867b0a86c92e}\label{__ssl_8c_a525f28b2748a3797f9e37011b3189827a5ae16370004d625cd02a867b0a86c92e}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}}\mbox{\Hypertarget{__ssl_8c_a525f28b2748a3797f9e37011b3189827a804a0041b4226b1de1d74159f247f1be}\label{__ssl_8c_a525f28b2748a3797f9e37011b3189827a804a0041b4226b1de1d74159f247f1be}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+O\+P\+T\+I\+O\+N\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED}}}\mbox{\Hypertarget{__ssl_8c_a525f28b2748a3797f9e37011b3189827a82404342e97dc0b7321e0791b43c0357}\label{__ssl_8c_a525f28b2748a3797f9e37011b3189827a82404342e97dc0b7321e0791b43c0357}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80f}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80f}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!py\+\_\+ssl\+\_\+error@{py\+\_\+ssl\+\_\+error}}
+\index{py\+\_\+ssl\+\_\+error@{py\+\_\+ssl\+\_\+error}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{py\+\_\+ssl\+\_\+error}{py\_ssl\_error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_a03a340b3d93938bef5038f20c95ea80f}{py\+\_\+ssl\+\_\+error}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa6d02323f5fb134d8c61ef57d187c02ef}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa6d02323f5fb134d8c61ef57d187c02ef}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa2dfa8d650454a5bc4a95922c0bd4ff7a}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa2dfa8d650454a5bc4a95922c0bd4ff7a}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+SL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa8c3c6f85e06dda879d6dd463aea91070}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa8c3c6f85e06dda879d6dd463aea91070}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+R\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fafa4a40506122125d639997b0626802bf}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fafa4a40506122125d639997b0626802bf}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+W\+R\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa7412f2018a0c13b279daae6bc62e465d}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa7412f2018a0c13b279daae6bc62e465d}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+X509\+\_\+\+L\+O\+O\+K\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa138dda527b37afc1f7b21991360424d1}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa138dda527b37afc1f7b21991360424d1}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+Y\+S\+C\+A\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa5a4abda68581fb13b598a792276d866d}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa5a4abda68581fb13b598a792276d866d}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+E\+T\+U\+RN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa198b679041770dd02c91e1c391b16a95}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa198b679041770dd02c91e1c391b16a95}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+A\+N\+T\+\_\+\+C\+O\+N\+N\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fab6a03b9b25ac1692873877b4fd5fb9a8}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fab6a03b9b25ac1692873877b4fd5fb9a8}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+OF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}}\mbox{\Hypertarget{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa993f999034f8187e656c8245b12b3c4b}\label{__ssl_8c_a03a340b3d93938bef5038f20c95ea80fa993f999034f8187e656c8245b12b3c4b}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{__ssl_8c_adf15365fae213d3b259edddb77fb5350}\label{__ssl_8c_adf15365fae213d3b259edddb77fb5350}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client@{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client}}
+\index{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client@{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client}{py\_ssl\_server\_or\_client}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_adf15365fae213d3b259edddb77fb5350}{py\+\_\+ssl\+\_\+server\+\_\+or\+\_\+client}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT}}}\mbox{\Hypertarget{__ssl_8c_adf15365fae213d3b259edddb77fb5350a2f6c50437413045edb754f00ee166ff2}\label{__ssl_8c_adf15365fae213d3b259edddb77fb5350a2f6c50437413045edb754f00ee166ff2}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{__ssl_8c_adf15365fae213d3b259edddb77fb5350a7f399f9847a2a36c74b8bb74abff3a70}\label{__ssl_8c_adf15365fae213d3b259edddb77fb5350a7f399f9847a2a36c74b8bb74abff3a70}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{__ssl_8c_ab0577b481700cf05116455c22059f39a}\label{__ssl_8c_ab0577b481700cf05116455c22059f39a}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode@{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode}}
+\index{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode@{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode}{py\_ssl\_sess\_cache\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_ab0577b481700cf05116455c22059f39a}{py\+\_\+ssl\+\_\+sess\+\_\+cache\+\_\+mode}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF}}}\mbox{\Hypertarget{__ssl_8c_ab0577b481700cf05116455c22059f39aa824e90ff7fe684fe668f64bcdfcba7ec}\label{__ssl_8c_ab0577b481700cf05116455c22059f39aa824e90ff7fe684fe668f64bcdfcba7ec}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT}}}\mbox{\Hypertarget{__ssl_8c_ab0577b481700cf05116455c22059f39aa3ff308386a688d936f0d757dc6714c6a}\label{__ssl_8c_ab0577b481700cf05116455c22059f39aa3ff308386a688d936f0d757dc6714c6a}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+L\+I\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{__ssl_8c_ab0577b481700cf05116455c22059f39aa53afe3d974a6ff4f8831b694f98025a7}\label{__ssl_8c_ab0577b481700cf05116455c22059f39aa53afe3d974a6ff4f8831b694f98025a7}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH}}}\mbox{\Hypertarget{__ssl_8c_ab0577b481700cf05116455c22059f39aaaf371b065aa4168434e0c161bdb3d6c5}\label{__ssl_8c_ab0577b481700cf05116455c22059f39aaaf371b065aa4168434e0c161bdb3d6c5}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+S\+E\+S\+S\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+O\+TH&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9f}\label{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9f}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!py\+\_\+ssl\+\_\+version@{py\+\_\+ssl\+\_\+version}}
+\index{py\+\_\+ssl\+\_\+version@{py\+\_\+ssl\+\_\+version}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{py\+\_\+ssl\+\_\+version}{py\_ssl\_version}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9f}{py\+\_\+ssl\+\_\+version}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2}}}\mbox{\Hypertarget{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa777363644f85e49d01cacf7414e74f84}\label{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa777363644f85e49d01cacf7414e74f84}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3}}}\mbox{\Hypertarget{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9faf24185be5b979ad101122520e773507a}\label{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9faf24185be5b979ad101122520e773507a}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23}}}\mbox{\Hypertarget{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa76a64557e0db237dffe94de59f4feaa1}\label{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fa76a64557e0db237dffe94de59f4feaa1}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+S\+L23&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1@{P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1}}}\mbox{\Hypertarget{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fac5b235d1518ce22c2bd82bdb83caebb2}\label{__ssl_8c_abb13d5a7e686dbfb40a4ace20b632f9fac5b235d1518ce22c2bd82bdb83caebb2}} 
+P\+Y\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+L\+S1&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591f}\label{__ssl_8c_a85828674249456a975ce981a93f3591f}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!timeout\+\_\+state@{timeout\+\_\+state}}
+\index{timeout\+\_\+state@{timeout\+\_\+state}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{timeout\+\_\+state}{timeout\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{__ssl_8c_a85828674249456a975ce981a93f3591f}{timeout\+\_\+state}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG@{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG@{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591faaf69d5a28bc0f922138bb2697161597f}\label{__ssl_8c_a85828674249456a975ce981a93f3591faaf69d5a28bc0f922138bb2697161597f}} 
+S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG@{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG@{S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591fa0c444d4eccb0e44d717cedc691d4ed6e}\label{__ssl_8c_a85828674249456a975ce981a93f3591fa0c444d4eccb0e44d717cedc691d4ed6e}} 
+S\+O\+C\+K\+E\+T\+\_\+\+I\+S\+\_\+\+B\+L\+O\+C\+K\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT@{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT@{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591fa67b1236c1794df56d82593059c65131d}\label{__ssl_8c_a85828674249456a975ce981a93f3591fa67b1236c1794df56d82593059c65131d}} 
+S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+T\+I\+M\+E\+D\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED@{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED@{S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591fa05bfb050091e6d3e7ba001475237f1fd}\label{__ssl_8c_a85828674249456a975ce981a93f3591fa05bfb050091e6d3e7ba001475237f1fd}} 
+S\+O\+C\+K\+E\+T\+\_\+\+H\+A\+S\+\_\+\+B\+E\+E\+N\+\_\+\+C\+L\+O\+S\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT@{S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT@{S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591faccbb6a16d75377a10304e5199193bf5f}\label{__ssl_8c_a85828674249456a975ce981a93f3591faccbb6a16d75377a10304e5199193bf5f}} 
+S\+O\+C\+K\+E\+T\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+O\+R\+\_\+\+S\+E\+L\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK@{S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK@{S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK}}}\mbox{\Hypertarget{__ssl_8c_a85828674249456a975ce981a93f3591fa1a611905db50848f6832210c535f8491}\label{__ssl_8c_a85828674249456a975ce981a93f3591fa1a611905db50848f6832210c535f8491}} 
+S\+O\+C\+K\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+OK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{__ssl_8c_a3e884da4affb112307bb4faac4627f5e}\label{__ssl_8c_a3e884da4affb112307bb4faac4627f5e}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!init\+\_\+forge\+\_\+ssl@{init\+\_\+forge\+\_\+ssl}}
+\index{init\+\_\+forge\+\_\+ssl@{init\+\_\+forge\+\_\+ssl}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+forge\+\_\+ssl()}{init\_forge\_ssl()}}
+{\footnotesize\ttfamily Py\+M\+O\+D\+I\+N\+I\+T\+\_\+\+F\+U\+NC init\+\_\+forge\+\_\+ssl (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_a91a34cfc488bd359ea7e6b4f163f8cf0}\label{__ssl_8c_a91a34cfc488bd359ea7e6b4f163f8cf0}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{sslwrap\+\_\+doc}]{,  }\item[{\char`\"{}sslwrap(socket, server\+\_\+side, \mbox{[}keyfile, certfile, certs\+\_\+mode, protocol,\textbackslash{} sess\+\_\+cache\+\_\+mode, sess\+\_\+id\+\_\+ctx, cacertsfile\mbox{]}) -\/$>$ sslobject\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_ae57d87ae1ff0fd353a693df06fba2bb0}\label{__ssl_8c_ae57d87ae1ff0fd353a693df06fba2bb0}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+\+S\+S\+Lwrap\+\_\+accepted\+\_\+doc}]{,  }\item[{\char`\"{}wrap\+\_\+accepted(socket) -\/$>$ sslobject\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_a02adc69115e81850704c34cfda2f5dfb}\label{__ssl_8c_a02adc69115e81850704c34cfda2f5dfb}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+peercert\+\_\+doc}]{,  }\item[{\char`\"{}peer\+\_\+certificate(\mbox{[}der=False\mbox{]}) -\/$>$ certificate\textbackslash{}eturns the certificate for the peer. If no certificate was}]{provided,  }\item[{\textbackslash{}returns None. If a certificate was}]{provided,  }\item[{but not}]{validated,  }\item[{returns\textbackslash{}an empty dictionary. Otherwise returns a dict containing information\textbackslash{}about the peer certificate.\textbackslash{}\textbackslash{}\+If the optional argument is}]{True,  }\item[{returns a D\+ER-\/encoded copy of the\textbackslash{}peer}]{certificate,  }\item[{or None if no certificate was provided. This will\textbackslash{}return the certificate even if it wasn \textquotesingle{}t validated.\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_adca188335f6a8b785402b2d39317fdda}\label{__ssl_8c_adca188335f6a8b785402b2d39317fdda}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+\+S\+S\+Lwrite\+\_\+doc}]{,  }\item[{\char`\"{}write(s) -\/$>$ len\textbackslash{}rites the string s into the S\+SL object. Returns the number\textbackslash{} bytes written.\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_a92a0bcecf091729b0951302c4b79e342}\label{__ssl_8c_a92a0bcecf091729b0951302c4b79e342}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+\+S\+S\+Lpending\+\_\+doc}]{,  }\item[{\char`\"{}pending() -\/$>$ count\textbackslash{}eturns the number of already decrypted bytes available for}]{read,  }\item[{\textbackslash{}pending on the connection.\textbackslash{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_ace37c5aca3a936d88c2309d42c501f7f}\label{__ssl_8c_ace37c5aca3a936d88c2309d42c501f7f}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+\+S\+S\+Lread\+\_\+doc}]{,  }\item[{\char`\"{}read(\mbox{[}len\mbox{]}) -\/$>$ string\textbackslash{}ead up to len bytes from the S\+SL socket.\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_a3b4c5bbe3cba7770f76700978a17a848}\label{__ssl_8c_a3b4c5bbe3cba7770f76700978a17a848}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{Py\+S\+S\+L\+\_\+\+S\+S\+Lshutdown\+\_\+doc}]{,  }\item[{\char`\"{}shutdown(s) -\/$>$ socket\textbackslash{}oes the S\+SL shutdown handshake with the remote}]{end,  }\item[{and returns\textbackslash{}the underlying socket object.\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{__ssl_8c_a22d24af157a72281c67be6e9810ccf0d}\label{__ssl_8c_a22d24af157a72281c67be6e9810ccf0d}} 
+\index{\+\_\+ssl.\+c@{\+\_\+ssl.\+c}!Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}}
+\index{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR@{Py\+Doc\+\_\+\+S\+T\+R\+V\+AR}!\+\_\+ssl.\+c@{\+\_\+ssl.\+c}}
+\subsubsection{\texorpdfstring{Py\+Doc\+\_\+\+S\+T\+R\+V\+A\+R()}{PyDoc\_STRVAR()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily Py\+Doc\+\_\+\+S\+T\+R\+V\+AR (\begin{DoxyParamCaption}\item[{module\+\_\+doc}]{,  }\item[{\char`\"{}Implementation module for S\+SL socket operations. See the socket module\textbackslash{}r documentation.\char`\"{}}]{ }\end{DoxyParamCaption})}
+

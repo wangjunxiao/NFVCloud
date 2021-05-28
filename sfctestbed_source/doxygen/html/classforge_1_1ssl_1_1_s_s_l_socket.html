@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>demo: forge.ssl.SSLSocket类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">demo
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">Vfunc Spring Boot项目概要</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceforge.html">forge</a></li><li class="navelem"><a class="el" href="namespaceforge_1_1ssl.html">ssl</a></li><li class="navelem"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html">SSLSocket</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classforge_1_1ssl_1_1_s_s_l_socket-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">forge.ssl.SSLSocket类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 forge.ssl.SSLSocket 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classforge_1_1ssl_1_1_s_s_l_socket.png" usemap="#forge.ssl.SSLSocket_map" alt=""/>
+  <map id="forge.ssl.SSLSocket_map" name="forge.ssl.SSLSocket_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a97e3b1a9ff4c70873287eae17a0acc3d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a97e3b1a9ff4c70873287eae17a0acc3d">__init__</a> (self, parent_socket, sock, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a95ee7412166c35665a476aa60222fe87">keyfile</a>=None, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a3562b6e1eadabd53356d211f7d03a039">certfile</a>=None, server_side=False, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a1266c34b9e0b1493b2bfcb35bca71684">cert_reqs</a>=CERT_NONE, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0c5acb8e8e849a8cd4c58a68dee02824">ssl_version</a>=PROTOCOL_SSLv23, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0612d90ce68eacadf3741707d170e92f">sess_cache_mode</a>=SESS_CACHE_SERVER, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a64b55ecae20d607f84c8fa64bca066ed">sess_id_ctx</a>=None, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a571438403f0b5c1d0a66c9e5729069bc">ca_certs</a>=None, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a948ce27f6c3ae2b3d38745838899ca81">do_handshake_on_connect</a>=True, <a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a9c816a1e9249f9ddbe51e5c51a18a2f5">suppress_ragged_eofs</a>=True)</td></tr>
+<tr class="separator:a97e3b1a9ff4c70873287eae17a0acc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144df4b280e6a4f0663a06482028e201"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a144df4b280e6a4f0663a06482028e201">read</a> (self, len=1024)</td></tr>
+<tr class="separator:a144df4b280e6a4f0663a06482028e201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e56598cdc86ce04148d15b75facafa7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a8e56598cdc86ce04148d15b75facafa7">write</a> (self, data)</td></tr>
+<tr class="separator:a8e56598cdc86ce04148d15b75facafa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c7514819f37d187aad23a85bc27948"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a89c7514819f37d187aad23a85bc27948">getpeercert</a> (self, binary_form=False)</td></tr>
+<tr class="separator:a89c7514819f37d187aad23a85bc27948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb49d5aa36898812e7e9d58ced6227d8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#acb49d5aa36898812e7e9d58ced6227d8">cipher</a> (self)</td></tr>
+<tr class="separator:acb49d5aa36898812e7e9d58ced6227d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346fe65abfc6f15cf839c9936b81b0bc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a346fe65abfc6f15cf839c9936b81b0bc">send</a> (self, data, flags=0)</td></tr>
+<tr class="separator:a346fe65abfc6f15cf839c9936b81b0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46696866abbec255f2b9b85eb7461a13"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a46696866abbec255f2b9b85eb7461a13">sendto</a> (self, data, addr, flags=0)</td></tr>
+<tr class="separator:a46696866abbec255f2b9b85eb7461a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f13aabe22d097cd72825b1e8b07aeb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a33f13aabe22d097cd72825b1e8b07aeb">sendall</a> (self, data, flags=0)</td></tr>
+<tr class="separator:a33f13aabe22d097cd72825b1e8b07aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94636100b76ef75be8f44a82bce063f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a94636100b76ef75be8f44a82bce063f1">recv</a> (self, buflen=1024, flags=0)</td></tr>
+<tr class="separator:a94636100b76ef75be8f44a82bce063f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d58a08ffcecf65e60beb9c40a9a03b2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0d58a08ffcecf65e60beb9c40a9a03b2">recv_into</a> (self, buffer, nbytes=None, flags=0)</td></tr>
+<tr class="separator:a0d58a08ffcecf65e60beb9c40a9a03b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7072b7194641fec3058cfd672c6e23b6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a7072b7194641fec3058cfd672c6e23b6">recvfrom</a> (self, addr, buflen=1024, flags=0)</td></tr>
+<tr class="separator:a7072b7194641fec3058cfd672c6e23b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2312d8e4b519fbb5d26fc17b8dfe8d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#acd2312d8e4b519fbb5d26fc17b8dfe8d">recvfrom_into</a> (self, buffer, nbytes=None, flags=0)</td></tr>
+<tr class="separator:acd2312d8e4b519fbb5d26fc17b8dfe8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6d75de12bff0e99387f6c320a4f80b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0b6d75de12bff0e99387f6c320a4f80b">pending</a> (self)</td></tr>
+<tr class="separator:a0b6d75de12bff0e99387f6c320a4f80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40639beecc18c90b8bbac43ec6252451"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a40639beecc18c90b8bbac43ec6252451">unwrap</a> (self)</td></tr>
+<tr class="separator:a40639beecc18c90b8bbac43ec6252451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806970ebd19bc4e16374c377a3e7f4a2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a806970ebd19bc4e16374c377a3e7f4a2">shutdown</a> (self, how)</td></tr>
+<tr class="separator:a806970ebd19bc4e16374c377a3e7f4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0931f143205a960d3f037491cea25513"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0931f143205a960d3f037491cea25513">close</a> (self)</td></tr>
+<tr class="separator:a0931f143205a960d3f037491cea25513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add93497ad9ad1614154f9eff518b2ef9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#add93497ad9ad1614154f9eff518b2ef9">do_handshake</a> (self)</td></tr>
+<tr class="separator:add93497ad9ad1614154f9eff518b2ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad376e228d79f3f27d01436cc252e2bbf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#ad376e228d79f3f27d01436cc252e2bbf">connect</a> (self, addr)</td></tr>
+<tr class="separator:ad376e228d79f3f27d01436cc252e2bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad217f805c6b78779d7276b2309660bf4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#ad217f805c6b78779d7276b2309660bf4">accept</a> (self)</td></tr>
+<tr class="separator:ad217f805c6b78779d7276b2309660bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837441ff1f9d4a42537e9948c1762b03"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a837441ff1f9d4a42537e9948c1762b03">makefile</a> (self, mode='r', bufsize=-1)</td></tr>
+<tr class="separator:a837441ff1f9d4a42537e9948c1762b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a95ee7412166c35665a476aa60222fe87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a95ee7412166c35665a476aa60222fe87">keyfile</a></td></tr>
+<tr class="separator:a95ee7412166c35665a476aa60222fe87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3562b6e1eadabd53356d211f7d03a039"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a3562b6e1eadabd53356d211f7d03a039">certfile</a></td></tr>
+<tr class="separator:a3562b6e1eadabd53356d211f7d03a039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1266c34b9e0b1493b2bfcb35bca71684"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a1266c34b9e0b1493b2bfcb35bca71684">cert_reqs</a></td></tr>
+<tr class="separator:a1266c34b9e0b1493b2bfcb35bca71684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5acb8e8e849a8cd4c58a68dee02824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0c5acb8e8e849a8cd4c58a68dee02824">ssl_version</a></td></tr>
+<tr class="separator:a0c5acb8e8e849a8cd4c58a68dee02824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0612d90ce68eacadf3741707d170e92f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a0612d90ce68eacadf3741707d170e92f">sess_cache_mode</a></td></tr>
+<tr class="separator:a0612d90ce68eacadf3741707d170e92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b55ecae20d607f84c8fa64bca066ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a64b55ecae20d607f84c8fa64bca066ed">sess_id_ctx</a></td></tr>
+<tr class="separator:a64b55ecae20d607f84c8fa64bca066ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571438403f0b5c1d0a66c9e5729069bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a571438403f0b5c1d0a66c9e5729069bc">ca_certs</a></td></tr>
+<tr class="separator:a571438403f0b5c1d0a66c9e5729069bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948ce27f6c3ae2b3d38745838899ca81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a948ce27f6c3ae2b3d38745838899ca81">do_handshake_on_connect</a></td></tr>
+<tr class="separator:a948ce27f6c3ae2b3d38745838899ca81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c816a1e9249f9ddbe51e5c51a18a2f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a9c816a1e9249f9ddbe51e5c51a18a2f5">suppress_ragged_eofs</a></td></tr>
+<tr class="separator:a9c816a1e9249f9ddbe51e5c51a18a2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a781132ee3186976abdaeacc9af6a7089"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a781132ee3186976abdaeacc9af6a7089">_sslobj</a></td></tr>
+<tr class="separator:a781132ee3186976abdaeacc9af6a7089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7001ca3e27be7d121411911813f70a31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforge_1_1ssl_1_1_s_s_l_socket.html#a7001ca3e27be7d121411911813f70a31">_makefile_refs</a></td></tr>
+<tr class="separator:a7001ca3e27be7d121411911813f70a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><pre class="fragment">This class implements a subtype of socket.socket that wraps
+the underlying OS socket in an SSL context when necessary, and
+provides read and write methods over that channel.</pre> </div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a97e3b1a9ff4c70873287eae17a0acc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e3b1a9ff4c70873287eae17a0acc3d">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>parent_socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>keyfile</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>certfile</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>server_side</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cert_reqs</em> = <code>CERT_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ssl_version</em> = <code>PROTOCOL_SSLv23</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>sess_cache_mode</em> = <code>SESS_CACHE_SERVER</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>sess_id_ctx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ca_certs</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>do_handshake_on_connect</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>suppress_ragged_eofs</em> = <code>True</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad217f805c6b78779d7276b2309660bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad217f805c6b78779d7276b2309660bf4">&#9670;&nbsp;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.accept </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Accepts a new connection from a remote client, and returns
+a tuple containing that new connection wrapped with a server-side
+SSL channel, and the address of the remote client.</pre> 
+</div>
+</div>
+<a id="acb49d5aa36898812e7e9d58ced6227d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb49d5aa36898812e7e9d58ced6227d8">&#9670;&nbsp;</a></span>cipher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.cipher </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0931f143205a960d3f037491cea25513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0931f143205a960d3f037491cea25513">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.close </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad376e228d79f3f27d01436cc252e2bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad376e228d79f3f27d01436cc252e2bbf">&#9670;&nbsp;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.connect </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Connects to remote ADDR, and then wraps the connection in
+an SSL channel.</pre> 
+</div>
+</div>
+<a id="add93497ad9ad1614154f9eff518b2ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add93497ad9ad1614154f9eff518b2ef9">&#9670;&nbsp;</a></span>do_handshake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.do_handshake </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Perform a TLS/SSL handshake.</pre> 
+</div>
+</div>
+<a id="a89c7514819f37d187aad23a85bc27948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c7514819f37d187aad23a85bc27948">&#9670;&nbsp;</a></span>getpeercert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.getpeercert </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>binary_form</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Returns a formatted version of the data in the
+certificate provided by the other end of the SSL channel.
+Return None if no certificate was provided, {} if a
+certificate was provided, but not validated.</pre> 
+</div>
+</div>
+<a id="a837441ff1f9d4a42537e9948c1762b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837441ff1f9d4a42537e9948c1762b03">&#9670;&nbsp;</a></span>makefile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.makefile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>'r'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bufsize</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Make and return a file-like object that
+works with the SSL connection.  Just use the code
+from the socket module.</pre> 
+</div>
+</div>
+<a id="a0b6d75de12bff0e99387f6c320a4f80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6d75de12bff0e99387f6c320a4f80b">&#9670;&nbsp;</a></span>pending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.pending </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a144df4b280e6a4f0663a06482028e201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144df4b280e6a4f0663a06482028e201">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.read </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>len</em> = <code>1024</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Read up to LEN bytes and return them.
+Return zero-length string on EOF.</pre> 
+</div>
+</div>
+<a id="a94636100b76ef75be8f44a82bce063f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94636100b76ef75be8f44a82bce063f1">&#9670;&nbsp;</a></span>recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.recv </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>buflen</em> = <code>1024</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d58a08ffcecf65e60beb9c40a9a03b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d58a08ffcecf65e60beb9c40a9a03b2">&#9670;&nbsp;</a></span>recv_into()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.recv_into </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nbytes</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7072b7194641fec3058cfd672c6e23b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7072b7194641fec3058cfd672c6e23b6">&#9670;&nbsp;</a></span>recvfrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.recvfrom </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>buflen</em> = <code>1024</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd2312d8e4b519fbb5d26fc17b8dfe8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2312d8e4b519fbb5d26fc17b8dfe8d">&#9670;&nbsp;</a></span>recvfrom_into()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.recvfrom_into </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nbytes</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a346fe65abfc6f15cf839c9936b81b0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346fe65abfc6f15cf839c9936b81b0bc">&#9670;&nbsp;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.send </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33f13aabe22d097cd72825b1e8b07aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f13aabe22d097cd72825b1e8b07aeb">&#9670;&nbsp;</a></span>sendall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.sendall </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46696866abbec255f2b9b85eb7461a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46696866abbec255f2b9b85eb7461a13">&#9670;&nbsp;</a></span>sendto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.sendto </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a806970ebd19bc4e16374c377a3e7f4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806970ebd19bc4e16374c377a3e7f4a2">&#9670;&nbsp;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.shutdown </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>how</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40639beecc18c90b8bbac43ec6252451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40639beecc18c90b8bbac43ec6252451">&#9670;&nbsp;</a></span>unwrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.unwrap </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e56598cdc86ce04148d15b75facafa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e56598cdc86ce04148d15b75facafa7">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def forge.ssl.SSLSocket.write </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Write DATA to the underlying SSL channel.  Returns
+number of bytes of DATA actually transmitted.</pre> 
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a7001ca3e27be7d121411911813f70a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7001ca3e27be7d121411911813f70a31">&#9670;&nbsp;</a></span>_makefile_refs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket._makefile_refs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a781132ee3186976abdaeacc9af6a7089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781132ee3186976abdaeacc9af6a7089">&#9670;&nbsp;</a></span>_sslobj</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket._sslobj</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a571438403f0b5c1d0a66c9e5729069bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571438403f0b5c1d0a66c9e5729069bc">&#9670;&nbsp;</a></span>ca_certs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.ca_certs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1266c34b9e0b1493b2bfcb35bca71684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1266c34b9e0b1493b2bfcb35bca71684">&#9670;&nbsp;</a></span>cert_reqs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.cert_reqs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3562b6e1eadabd53356d211f7d03a039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3562b6e1eadabd53356d211f7d03a039">&#9670;&nbsp;</a></span>certfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.certfile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a948ce27f6c3ae2b3d38745838899ca81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948ce27f6c3ae2b3d38745838899ca81">&#9670;&nbsp;</a></span>do_handshake_on_connect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.do_handshake_on_connect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95ee7412166c35665a476aa60222fe87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ee7412166c35665a476aa60222fe87">&#9670;&nbsp;</a></span>keyfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.keyfile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0612d90ce68eacadf3741707d170e92f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0612d90ce68eacadf3741707d170e92f">&#9670;&nbsp;</a></span>sess_cache_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.sess_cache_mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64b55ecae20d607f84c8fa64bca066ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b55ecae20d607f84c8fa64bca066ed">&#9670;&nbsp;</a></span>sess_id_ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.sess_id_ctx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c5acb8e8e849a8cd4c58a68dee02824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5acb8e8e849a8cd4c58a68dee02824">&#9670;&nbsp;</a></span>ssl_version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.ssl_version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c816a1e9249f9ddbe51e5c51a18a2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c816a1e9249f9ddbe51e5c51a18a2f5">&#9670;&nbsp;</a></span>suppress_ragged_eofs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forge.ssl.SSLSocket.suppress_ragged_eofs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>C:/workspace/demo/src/main/script/node_modules/node-forge/tests/forge_ssl/forge/<a class="el" href="ssl_8py.html">ssl.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,124 @@
+\hypertarget{namespaceserver}{}\section{server 命名空间参考}
+\label{namespaceserver}\index{server@{server}}
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classserver_1_1_policy_handler}{Policy\+Handler}}
+\item 
+class \mbox{\hyperlink{classserver_1_1_threaded_t_c_p_server}{Threaded\+T\+C\+P\+Server}}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceserver_a2789ab523ceef7e25828435e6c51529d}{create\+\_\+policy\+\_\+server}} (options)
+\item 
+def \mbox{\hyperlink{namespaceserver_aa600f791a9d38b43a5425a80925f7516}{create\+\_\+http\+\_\+server}} (options, script\+\_\+dir)
+\item 
+def \mbox{\hyperlink{namespaceserver_a1a282be6be1de080e6276cb7b4f19769}{serve\+\_\+forever}} (server)
+\item 
+def \mbox{\hyperlink{namespaceserver_a6d1c10ed8aa5d27e61ed9db6b4274261}{main}} ()
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespaceserver_a2d9eb5bc772371a5bf0eab11f69c96e0}{python\+\_\+version}} = \char`\"{}python\char`\"{} + sys.\+version\mbox{[}\+:3\mbox{]}
+\item 
+bool \mbox{\hyperlink{namespaceserver_a1a00a033df4f0f501c08a48b0fe3576e}{have\+\_\+ssl\+\_\+sessions}} = True
+\item 
+bool \mbox{\hyperlink{namespaceserver_ac00fdf40a0746b38ef2edcfbc30e8ab4}{have\+\_\+ssl}} = True
+\item 
+\mbox{\hyperlink{namespaceserver_a4370bca87712ae693b825e12c75eb8de}{allow\+\_\+reuse\+\_\+address}}
+\item 
+string \mbox{\hyperlink{namespaceserver_a6bc5d1b1f25bf1fde3266fa15447a414}{policy\+\_\+file}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+\begin{DoxyVerb}SSL server for Forge tests.
+
+- The server changes to the directory of the server script.
+- SSL uses "server.key" and "server.crt".
+- Sever performs basic static file serving.
+- Starts Flash cross domain policy file server.
+- Defaults to HTTP/HTTPS port 19400.
+- Defaults to Flash socket policy port 19945.
+
+  $ ./server.py [options]
+
+If you just need a simple HTTP server, also consider:
+  $ python -m SimpleHTTPServer 19400
+\end{DoxyVerb}
+ 
+
+\subsection{函数说明}
+\mbox{\Hypertarget{namespaceserver_aa600f791a9d38b43a5425a80925f7516}\label{namespaceserver_aa600f791a9d38b43a5425a80925f7516}} 
+\index{server@{server}!create\+\_\+http\+\_\+server@{create\+\_\+http\+\_\+server}}
+\index{create\+\_\+http\+\_\+server@{create\+\_\+http\+\_\+server}!server@{server}}
+\subsubsection{\texorpdfstring{create\+\_\+http\+\_\+server()}{create\_http\_server()}}
+{\footnotesize\ttfamily def server.\+create\+\_\+http\+\_\+server (\begin{DoxyParamCaption}\item[{}]{options,  }\item[{}]{script\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start a static file server\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceserver_a2789ab523ceef7e25828435e6c51529d}\label{namespaceserver_a2789ab523ceef7e25828435e6c51529d}} 
+\index{server@{server}!create\+\_\+policy\+\_\+server@{create\+\_\+policy\+\_\+server}}
+\index{create\+\_\+policy\+\_\+server@{create\+\_\+policy\+\_\+server}!server@{server}}
+\subsubsection{\texorpdfstring{create\+\_\+policy\+\_\+server()}{create\_policy\_server()}}
+{\footnotesize\ttfamily def server.\+create\+\_\+policy\+\_\+server (\begin{DoxyParamCaption}\item[{}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start a policy server\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceserver_a6d1c10ed8aa5d27e61ed9db6b4274261}\label{namespaceserver_a6d1c10ed8aa5d27e61ed9db6b4274261}} 
+\index{server@{server}!main@{main}}
+\index{main@{main}!server@{server}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def server.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start static file and policy servers\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceserver_a1a282be6be1de080e6276cb7b4f19769}\label{namespaceserver_a1a282be6be1de080e6276cb7b4f19769}} 
+\index{server@{server}!serve\+\_\+forever@{serve\+\_\+forever}}
+\index{serve\+\_\+forever@{serve\+\_\+forever}!server@{server}}
+\subsubsection{\texorpdfstring{serve\+\_\+forever()}{serve\_forever()}}
+{\footnotesize\ttfamily def server.\+serve\+\_\+forever (\begin{DoxyParamCaption}\item[{}]{server }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serve until shutdown or keyboard interrupt.\end{DoxyVerb}
+ 
+
+\subsection{变量说明}
+\mbox{\Hypertarget{namespaceserver_a4370bca87712ae693b825e12c75eb8de}\label{namespaceserver_a4370bca87712ae693b825e12c75eb8de}} 
+\index{server@{server}!allow\+\_\+reuse\+\_\+address@{allow\+\_\+reuse\+\_\+address}}
+\index{allow\+\_\+reuse\+\_\+address@{allow\+\_\+reuse\+\_\+address}!server@{server}}
+\subsubsection{\texorpdfstring{allow\+\_\+reuse\+\_\+address}{allow\_reuse\_address}}
+{\footnotesize\ttfamily server.\+allow\+\_\+reuse\+\_\+address}
+
+\mbox{\Hypertarget{namespaceserver_ac00fdf40a0746b38ef2edcfbc30e8ab4}\label{namespaceserver_ac00fdf40a0746b38ef2edcfbc30e8ab4}} 
+\index{server@{server}!have\+\_\+ssl@{have\+\_\+ssl}}
+\index{have\+\_\+ssl@{have\+\_\+ssl}!server@{server}}
+\subsubsection{\texorpdfstring{have\+\_\+ssl}{have\_ssl}}
+{\footnotesize\ttfamily bool server.\+have\+\_\+ssl = True}
+
+\mbox{\Hypertarget{namespaceserver_a1a00a033df4f0f501c08a48b0fe3576e}\label{namespaceserver_a1a00a033df4f0f501c08a48b0fe3576e}} 
+\index{server@{server}!have\+\_\+ssl\+\_\+sessions@{have\+\_\+ssl\+\_\+sessions}}
+\index{have\+\_\+ssl\+\_\+sessions@{have\+\_\+ssl\+\_\+sessions}!server@{server}}
+\subsubsection{\texorpdfstring{have\+\_\+ssl\+\_\+sessions}{have\_ssl\_sessions}}
+{\footnotesize\ttfamily bool server.\+have\+\_\+ssl\+\_\+sessions = True}
+
+\mbox{\Hypertarget{namespaceserver_a6bc5d1b1f25bf1fde3266fa15447a414}\label{namespaceserver_a6bc5d1b1f25bf1fde3266fa15447a414}} 
+\index{server@{server}!policy\+\_\+file@{policy\+\_\+file}}
+\index{policy\+\_\+file@{policy\+\_\+file}!server@{server}}
+\subsubsection{\texorpdfstring{policy\+\_\+file}{policy\_file}}
+{\footnotesize\ttfamily string server.\+policy\+\_\+file}
+
+{\bfseries 初始值\+:}
+\begin{DoxyCode}
+1 =  \textcolor{stringliteral}{"""\(\backslash\)}
+2 \textcolor{stringliteral}{<?xml version="1.0"?>\(\backslash\)}
+3 \textcolor{stringliteral}{<!DOCTYPE cross-domain-policy\(\backslash\)}
+4 \textcolor{stringliteral}{ SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">\(\backslash\)}
+5 \textcolor{stringliteral}{<cross-domain-policy>\(\backslash\)}
+6 \textcolor{stringliteral}{<allow-access-from domain="*" to-ports="*"/>\(\backslash\)}
+7 \textcolor{stringliteral}{</cross-domain-policy>\(\backslash\)0"""}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceserver_a2d9eb5bc772371a5bf0eab11f69c96e0}\label{namespaceserver_a2d9eb5bc772371a5bf0eab11f69c96e0}} 
+\index{server@{server}!python\+\_\+version@{python\+\_\+version}}
+\index{python\+\_\+version@{python\+\_\+version}!server@{server}}
+\subsubsection{\texorpdfstring{python\+\_\+version}{python\_version}}
+{\footnotesize\ttfamily string server.\+python\+\_\+version = \char`\"{}python\char`\"{} + sys.\+version\mbox{[}\+:3\mbox{]}}
+

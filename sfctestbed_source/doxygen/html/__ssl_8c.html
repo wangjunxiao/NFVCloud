@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>demo: C:/workspace/demo/src/main/script/node_modules/node-forge/tests/forge_ssl/forge/_ssl.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">demo
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">Vfunc Spring Boot项目概要</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a5be7bbed3ff2f129951759fe96bf5d5.html">workspace</a></li><li class="navelem"><a class="el" href="dir_8f7847266e4a03a0d974bc39d14bc3ff.html">demo</a></li><li class="navelem"><a class="el" href="dir_6faaf966280a35616960dcfb43b5502b.html">src</a></li><li class="navelem"><a class="el" href="dir_081f1f5b189e4f5d3d06b161a883ec3b.html">main</a></li><li class="navelem"><a class="el" href="dir_129bd89c68671d69928118e8dbe3fb70.html">script</a></li><li class="navelem"><a class="el" href="dir_47c23144307e90772d88cc9cde96ea5b.html">node_modules</a></li><li class="navelem"><a class="el" href="dir_7e8eef9c8bf268c446b547c5c6d2c2b8.html">node-forge</a></li><li class="navelem"><a class="el" href="dir_1c344d25e0773a40d76ef486b4744ab7.html">tests</a></li><li class="navelem"><a class="el" href="dir_0143b74f1069d16a4d729cacba0ca35c.html">forge_ssl</a></li><li class="navelem"><a class="el" href="dir_00ef179acffa56d9dc40ecda3bfd4e7b.html">forge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">_ssl.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;Python.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="socketmodule_8h_source.html">socketmodule.h</a>&quot;</code><br />
+<code>#include &quot;openssl/rsa.h&quot;</code><br />
+<code>#include &quot;openssl/crypto.h&quot;</code><br />
+<code>#include &quot;openssl/x509.h&quot;</code><br />
+<code>#include &quot;openssl/x509v3.h&quot;</code><br />
+<code>#include &quot;openssl/pem.h&quot;</code><br />
+<code>#include &quot;openssl/ssl.h&quot;</code><br />
+<code>#include &quot;openssl/err.h&quot;</code><br />
+<code>#include &quot;openssl/rand.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_py_s_s_l_object.html">PySSLObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aff16d95e96aaead54a47563fd0380c61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#aff16d95e96aaead54a47563fd0380c61">PySSL_BEGIN_ALLOW_THREADS</a></td></tr>
+<tr class="separator:aff16d95e96aaead54a47563fd0380c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed2e3a8256bb153555f2bde1ea18ecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a0ed2e3a8256bb153555f2bde1ea18ecc">PySSL_BLOCK_THREADS</a></td></tr>
+<tr class="separator:a0ed2e3a8256bb153555f2bde1ea18ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0304e6781778a4dd5403251a02bb497"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#ab0304e6781778a4dd5403251a02bb497">PySSL_UNBLOCK_THREADS</a></td></tr>
+<tr class="separator:ab0304e6781778a4dd5403251a02bb497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4663c1b9039afb0ab0dbc844e83e974f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a4663c1b9039afb0ab0dbc844e83e974f">PySSL_END_ALLOW_THREADS</a></td></tr>
+<tr class="separator:a4663c1b9039afb0ab0dbc844e83e974f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7e443d6278e58a08d1e1449113d943"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#add7e443d6278e58a08d1e1449113d943">X509_NAME_MAXLEN</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:add7e443d6278e58a08d1e1449113d943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c0f6093edef5bd1cf6d30e3826f19b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a83c0f6093edef5bd1cf6d30e3826f19b">PySSLObject_Check</a>(v)&#160;&#160;&#160;(Py_TYPE(v) == &amp;PySSL_Type)</td></tr>
+<tr class="separator:a83c0f6093edef5bd1cf6d30e3826f19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb53d8268067abf9b372dffbb7a081db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#adb53d8268067abf9b372dffbb7a081db">STRINGIFY1</a>(x)&#160;&#160;&#160;#x</td></tr>
+<tr class="separator:adb53d8268067abf9b372dffbb7a081db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f0baf2fca639d9cb25be1b9e03e335"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a41f0baf2fca639d9cb25be1b9e03e335">STRINGIFY2</a>(x)&#160;&#160;&#160;<a class="el" href="__ssl_8c.html#adb53d8268067abf9b372dffbb7a081db">STRINGIFY1</a>(x)</td></tr>
+<tr class="separator:a41f0baf2fca639d9cb25be1b9e03e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc018f18f08b2d48026c00db008c482"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a3cc018f18f08b2d48026c00db008c482">ERRSTR1</a>(x,  y,  z)&#160;&#160;&#160;(x &quot;:&quot; y &quot;: &quot; z)</td></tr>
+<tr class="separator:a3cc018f18f08b2d48026c00db008c482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9b2e771468730d529476cc4a5101f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a6e9b2e771468730d529476cc4a5101f5">ERRSTR</a>(x)&#160;&#160;&#160;<a class="el" href="__ssl_8c.html#a3cc018f18f08b2d48026c00db008c482">ERRSTR1</a>(&quot;_ssl.c&quot;, STRINGIFY2(__LINE__), x)</td></tr>
+<tr class="separator:a6e9b2e771468730d529476cc4a5101f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a03a340b3d93938bef5038f20c95ea80f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80f">py_ssl_error</a> { <br />
+&#160;&#160;<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa6d02323f5fb134d8c61ef57d187c02ef">PY_SSL_ERROR_NONE</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa2dfa8d650454a5bc4a95922c0bd4ff7a">PY_SSL_ERROR_SSL</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa8c3c6f85e06dda879d6dd463aea91070">PY_SSL_ERROR_WANT_READ</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fafa4a40506122125d639997b0626802bf">PY_SSL_ERROR_WANT_WRITE</a>, 
+<br />
+&#160;&#160;<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa7412f2018a0c13b279daae6bc62e465d">PY_SSL_ERROR_WANT_X509_LOOKUP</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa138dda527b37afc1f7b21991360424d1">PY_SSL_ERROR_SYSCALL</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa5a4abda68581fb13b598a792276d866d">PY_SSL_ERROR_ZERO_RETURN</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa198b679041770dd02c91e1c391b16a95">PY_SSL_ERROR_WANT_CONNECT</a>, 
+<br />
+&#160;&#160;<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fab6a03b9b25ac1692873877b4fd5fb9a8">PY_SSL_ERROR_EOF</a>, 
+<a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80fa993f999034f8187e656c8245b12b3c4b">PY_SSL_ERROR_INVALID_ERROR_CODE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a03a340b3d93938bef5038f20c95ea80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf15365fae213d3b259edddb77fb5350"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#adf15365fae213d3b259edddb77fb5350">py_ssl_server_or_client</a> { <a class="el" href="__ssl_8c.html#adf15365fae213d3b259edddb77fb5350a2f6c50437413045edb754f00ee166ff2">PY_SSL_CLIENT</a>, 
+<a class="el" href="__ssl_8c.html#adf15365fae213d3b259edddb77fb5350a7f399f9847a2a36c74b8bb74abff3a70">PY_SSL_SERVER</a>
+ }</td></tr>
+<tr class="separator:adf15365fae213d3b259edddb77fb5350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525f28b2748a3797f9e37011b3189827"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a525f28b2748a3797f9e37011b3189827">py_ssl_cert_requirements</a> { <a class="el" href="__ssl_8c.html#a525f28b2748a3797f9e37011b3189827a5ae16370004d625cd02a867b0a86c92e">PY_SSL_CERT_NONE</a>, 
+<a class="el" href="__ssl_8c.html#a525f28b2748a3797f9e37011b3189827a804a0041b4226b1de1d74159f247f1be">PY_SSL_CERT_OPTIONAL</a>, 
+<a class="el" href="__ssl_8c.html#a525f28b2748a3797f9e37011b3189827a82404342e97dc0b7321e0791b43c0357">PY_SSL_CERT_REQUIRED</a>
+ }</td></tr>
+<tr class="separator:a525f28b2748a3797f9e37011b3189827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb13d5a7e686dbfb40a4ace20b632f9f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9f">py_ssl_version</a> { <a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9fa777363644f85e49d01cacf7414e74f84">PY_SSL_VERSION_SSL2</a>, 
+<a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9faf24185be5b979ad101122520e773507a">PY_SSL_VERSION_SSL3</a>, 
+<a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9fa76a64557e0db237dffe94de59f4feaa1">PY_SSL_VERSION_SSL23</a>, 
+<a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9fac5b235d1518ce22c2bd82bdb83caebb2">PY_SSL_VERSION_TLS1</a>
+ }</td></tr>
+<tr class="separator:abb13d5a7e686dbfb40a4ace20b632f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0577b481700cf05116455c22059f39a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39a">py_ssl_sess_cache_mode</a> { <a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39aa824e90ff7fe684fe668f64bcdfcba7ec">PY_SSL_SESS_CACHE_OFF</a>, 
+<a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39aa3ff308386a688d936f0d757dc6714c6a">PY_SSL_SESS_CACHE_CLIENT</a>, 
+<a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39aa53afe3d974a6ff4f8831b694f98025a7">PY_SSL_SESS_CACHE_SERVER</a>, 
+<a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39aaaf371b065aa4168434e0c161bdb3d6c5">PY_SSL_SESS_CACHE_BOTH</a>
+ }</td></tr>
+<tr class="separator:ab0577b481700cf05116455c22059f39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85828674249456a975ce981a93f3591f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591f">timeout_state</a> { <br />
+&#160;&#160;<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591faaf69d5a28bc0f922138bb2697161597f">SOCKET_IS_NONBLOCKING</a>, 
+<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591fa0c444d4eccb0e44d717cedc691d4ed6e">SOCKET_IS_BLOCKING</a>, 
+<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591fa67b1236c1794df56d82593059c65131d">SOCKET_HAS_TIMED_OUT</a>, 
+<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591fa05bfb050091e6d3e7ba001475237f1fd">SOCKET_HAS_BEEN_CLOSED</a>, 
+<br />
+&#160;&#160;<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591faccbb6a16d75377a10304e5199193bf5f">SOCKET_TOO_LARGE_FOR_SELECT</a>, 
+<a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591fa1a611905db50848f6832210c535f8491">SOCKET_OPERATION_OK</a>
+<br />
+ }</td></tr>
+<tr class="separator:a85828674249456a975ce981a93f3591f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a91a34cfc488bd359ea7e6b4f163f8cf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a91a34cfc488bd359ea7e6b4f163f8cf0">PyDoc_STRVAR</a> (sslwrap_doc, &quot;sslwrap(socket, server_side, [keyfile, certfile, certs_mode, protocol,\ &quot; sess_cache_mode, sess_id_ctx, cacertsfile]) -&gt; sslobject&quot;)</td></tr>
+<tr class="separator:a91a34cfc488bd359ea7e6b4f163f8cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57d87ae1ff0fd353a693df06fba2bb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#ae57d87ae1ff0fd353a693df06fba2bb0">PyDoc_STRVAR</a> (PySSL_SSLwrap_accepted_doc, &quot;wrap_accepted(socket) -&gt; sslobject&quot;)</td></tr>
+<tr class="separator:ae57d87ae1ff0fd353a693df06fba2bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02adc69115e81850704c34cfda2f5dfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a02adc69115e81850704c34cfda2f5dfb">PyDoc_STRVAR</a> (PySSL_peercert_doc, &quot;peer_certificate([der=False]) -&gt; certificate\\Returns the certificate for the peer.  If no certificate was provided,\returns None.  If a certificate was provided, but not validated, returns\an empty dictionary.  Otherwise returns a dict containing information\about the peer certificate.\\If the optional argument is True, returns a DER-encoded copy of the\peer certificate, or None if no certificate was provided.  This will\return the certificate even if it wasn't validated.&quot;)</td></tr>
+<tr class="separator:a02adc69115e81850704c34cfda2f5dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca188335f6a8b785402b2d39317fdda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#adca188335f6a8b785402b2d39317fdda">PyDoc_STRVAR</a> (PySSL_SSLwrite_doc, &quot;write(s) -&gt; len\\Writes the string s into the SSL object.  Returns the number\of bytes written.&quot;)</td></tr>
+<tr class="separator:adca188335f6a8b785402b2d39317fdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a0bcecf091729b0951302c4b79e342"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a92a0bcecf091729b0951302c4b79e342">PyDoc_STRVAR</a> (PySSL_SSLpending_doc, &quot;pending() -&gt; count\\Returns the number of already decrypted bytes available for read,\pending on the connection.\)</td></tr>
+<tr class="separator:a92a0bcecf091729b0951302c4b79e342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace37c5aca3a936d88c2309d42c501f7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#ace37c5aca3a936d88c2309d42c501f7f">PyDoc_STRVAR</a> (PySSL_SSLread_doc, &quot;read([len]) -&gt; string\\Read up to len bytes from the SSL socket.&quot;)</td></tr>
+<tr class="separator:ace37c5aca3a936d88c2309d42c501f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4c5bbe3cba7770f76700978a17a848"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a3b4c5bbe3cba7770f76700978a17a848">PyDoc_STRVAR</a> (PySSL_SSLshutdown_doc, &quot;shutdown(s) -&gt; socket\\Does the SSL shutdown handshake with the remote end, and returns\the underlying socket object.&quot;)</td></tr>
+<tr class="separator:a3b4c5bbe3cba7770f76700978a17a848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d24af157a72281c67be6e9810ccf0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a22d24af157a72281c67be6e9810ccf0d">PyDoc_STRVAR</a> (module_doc, &quot;Implementation module for SSL socket operations.  See the socket module\for documentation.&quot;)</td></tr>
+<tr class="separator:a22d24af157a72281c67be6e9810ccf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e884da4affb112307bb4faac4627f5e"><td class="memItemLeft" align="right" valign="top">PyMODINIT_FUNC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="__ssl_8c.html#a3e884da4affb112307bb4faac4627f5e">init_forge_ssl</a> (void)</td></tr>
+<tr class="separator:a3e884da4affb112307bb4faac4627f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a6e9b2e771468730d529476cc4a5101f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9b2e771468730d529476cc4a5101f5">&#9670;&nbsp;</a></span>ERRSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRSTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="__ssl_8c.html#a3cc018f18f08b2d48026c00db008c482">ERRSTR1</a>(&quot;_ssl.c&quot;, STRINGIFY2(__LINE__), x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cc018f18f08b2d48026c00db008c482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc018f18f08b2d48026c00db008c482">&#9670;&nbsp;</a></span>ERRSTR1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRSTR1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(x &quot;:&quot; y &quot;: &quot; z)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff16d95e96aaead54a47563fd0380c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff16d95e96aaead54a47563fd0380c61">&#9670;&nbsp;</a></span>PySSL_BEGIN_ALLOW_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PySSL_BEGIN_ALLOW_THREADS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ed2e3a8256bb153555f2bde1ea18ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed2e3a8256bb153555f2bde1ea18ecc">&#9670;&nbsp;</a></span>PySSL_BLOCK_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PySSL_BLOCK_THREADS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4663c1b9039afb0ab0dbc844e83e974f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4663c1b9039afb0ab0dbc844e83e974f">&#9670;&nbsp;</a></span>PySSL_END_ALLOW_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PySSL_END_ALLOW_THREADS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0304e6781778a4dd5403251a02bb497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0304e6781778a4dd5403251a02bb497">&#9670;&nbsp;</a></span>PySSL_UNBLOCK_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PySSL_UNBLOCK_THREADS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83c0f6093edef5bd1cf6d30e3826f19b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c0f6093edef5bd1cf6d30e3826f19b">&#9670;&nbsp;</a></span>PySSLObject_Check</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PySSLObject_Check</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v</td><td>)</td>
+          <td>&#160;&#160;&#160;(Py_TYPE(v) == &amp;PySSL_Type)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb53d8268067abf9b372dffbb7a081db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb53d8268067abf9b372dffbb7a081db">&#9670;&nbsp;</a></span>STRINGIFY1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRINGIFY1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;#x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41f0baf2fca639d9cb25be1b9e03e335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f0baf2fca639d9cb25be1b9e03e335">&#9670;&nbsp;</a></span>STRINGIFY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRINGIFY2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="__ssl_8c.html#adb53d8268067abf9b372dffbb7a081db">STRINGIFY1</a>(x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add7e443d6278e58a08d1e1449113d943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7e443d6278e58a08d1e1449113d943">&#9670;&nbsp;</a></span>X509_NAME_MAXLEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define X509_NAME_MAXLEN&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a525f28b2748a3797f9e37011b3189827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525f28b2748a3797f9e37011b3189827">&#9670;&nbsp;</a></span>py_ssl_cert_requirements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#a525f28b2748a3797f9e37011b3189827">py_ssl_cert_requirements</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a525f28b2748a3797f9e37011b3189827a5ae16370004d625cd02a867b0a86c92e"></a>PY_SSL_CERT_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a525f28b2748a3797f9e37011b3189827a804a0041b4226b1de1d74159f247f1be"></a>PY_SSL_CERT_OPTIONAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a525f28b2748a3797f9e37011b3189827a82404342e97dc0b7321e0791b43c0357"></a>PY_SSL_CERT_REQUIRED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a03a340b3d93938bef5038f20c95ea80f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03a340b3d93938bef5038f20c95ea80f">&#9670;&nbsp;</a></span>py_ssl_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#a03a340b3d93938bef5038f20c95ea80f">py_ssl_error</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa6d02323f5fb134d8c61ef57d187c02ef"></a>PY_SSL_ERROR_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa2dfa8d650454a5bc4a95922c0bd4ff7a"></a>PY_SSL_ERROR_SSL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa8c3c6f85e06dda879d6dd463aea91070"></a>PY_SSL_ERROR_WANT_READ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fafa4a40506122125d639997b0626802bf"></a>PY_SSL_ERROR_WANT_WRITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa7412f2018a0c13b279daae6bc62e465d"></a>PY_SSL_ERROR_WANT_X509_LOOKUP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa138dda527b37afc1f7b21991360424d1"></a>PY_SSL_ERROR_SYSCALL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa5a4abda68581fb13b598a792276d866d"></a>PY_SSL_ERROR_ZERO_RETURN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa198b679041770dd02c91e1c391b16a95"></a>PY_SSL_ERROR_WANT_CONNECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fab6a03b9b25ac1692873877b4fd5fb9a8"></a>PY_SSL_ERROR_EOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a03a340b3d93938bef5038f20c95ea80fa993f999034f8187e656c8245b12b3c4b"></a>PY_SSL_ERROR_INVALID_ERROR_CODE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="adf15365fae213d3b259edddb77fb5350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf15365fae213d3b259edddb77fb5350">&#9670;&nbsp;</a></span>py_ssl_server_or_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#adf15365fae213d3b259edddb77fb5350">py_ssl_server_or_client</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="adf15365fae213d3b259edddb77fb5350a2f6c50437413045edb754f00ee166ff2"></a>PY_SSL_CLIENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf15365fae213d3b259edddb77fb5350a7f399f9847a2a36c74b8bb74abff3a70"></a>PY_SSL_SERVER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab0577b481700cf05116455c22059f39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0577b481700cf05116455c22059f39a">&#9670;&nbsp;</a></span>py_ssl_sess_cache_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#ab0577b481700cf05116455c22059f39a">py_ssl_sess_cache_mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ab0577b481700cf05116455c22059f39aa824e90ff7fe684fe668f64bcdfcba7ec"></a>PY_SSL_SESS_CACHE_OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab0577b481700cf05116455c22059f39aa3ff308386a688d936f0d757dc6714c6a"></a>PY_SSL_SESS_CACHE_CLIENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab0577b481700cf05116455c22059f39aa53afe3d974a6ff4f8831b694f98025a7"></a>PY_SSL_SESS_CACHE_SERVER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab0577b481700cf05116455c22059f39aaaf371b065aa4168434e0c161bdb3d6c5"></a>PY_SSL_SESS_CACHE_BOTH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="abb13d5a7e686dbfb40a4ace20b632f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb13d5a7e686dbfb40a4ace20b632f9f">&#9670;&nbsp;</a></span>py_ssl_version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#abb13d5a7e686dbfb40a4ace20b632f9f">py_ssl_version</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="abb13d5a7e686dbfb40a4ace20b632f9fa777363644f85e49d01cacf7414e74f84"></a>PY_SSL_VERSION_SSL2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb13d5a7e686dbfb40a4ace20b632f9faf24185be5b979ad101122520e773507a"></a>PY_SSL_VERSION_SSL3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb13d5a7e686dbfb40a4ace20b632f9fa76a64557e0db237dffe94de59f4feaa1"></a>PY_SSL_VERSION_SSL23&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb13d5a7e686dbfb40a4ace20b632f9fac5b235d1518ce22c2bd82bdb83caebb2"></a>PY_SSL_VERSION_TLS1&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a85828674249456a975ce981a93f3591f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85828674249456a975ce981a93f3591f">&#9670;&nbsp;</a></span>timeout_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="__ssl_8c.html#a85828674249456a975ce981a93f3591f">timeout_state</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591faaf69d5a28bc0f922138bb2697161597f"></a>SOCKET_IS_NONBLOCKING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591fa0c444d4eccb0e44d717cedc691d4ed6e"></a>SOCKET_IS_BLOCKING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591fa67b1236c1794df56d82593059c65131d"></a>SOCKET_HAS_TIMED_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591fa05bfb050091e6d3e7ba001475237f1fd"></a>SOCKET_HAS_BEEN_CLOSED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591faccbb6a16d75377a10304e5199193bf5f"></a>SOCKET_TOO_LARGE_FOR_SELECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85828674249456a975ce981a93f3591fa1a611905db50848f6832210c535f8491"></a>SOCKET_OPERATION_OK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3e884da4affb112307bb4faac4627f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e884da4affb112307bb4faac4627f5e">&#9670;&nbsp;</a></span>init_forge_ssl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyMODINIT_FUNC init_forge_ssl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91a34cfc488bd359ea7e6b4f163f8cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a34cfc488bd359ea7e6b4f163f8cf0">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">sslwrap_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;sslwrap(socket, server_side, [keyfile, certfile, certs_mode, protocol,\ sess_cache_mode, sess_id_ctx, cacertsfile]) -&gt; sslobject&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae57d87ae1ff0fd353a693df06fba2bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57d87ae1ff0fd353a693df06fba2bb0">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_SSLwrap_accepted_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;wrap_accepted(socket) -&gt; sslobject&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02adc69115e81850704c34cfda2f5dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02adc69115e81850704c34cfda2f5dfb">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_peercert_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;peer_certificate([der=False]) -&gt; certificate\eturns the certificate for the peer. If no certificate was&#160;</td>
+          <td class="paramname"><em>provided</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">\returns None. If a certificate was&#160;</td>
+          <td class="paramname"><em>provided</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">but not&#160;</td>
+          <td class="paramname"><em>validated</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">returns\an empty dictionary. Otherwise returns a dict containing information\about the peer certificate.\\If the optional argument is&#160;</td>
+          <td class="paramname"><em>True</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">returns a DER-encoded copy of the\peer&#160;</td>
+          <td class="paramname"><em>certificate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">or None if no certificate was provided. This will\return the certificate even if it wasn 't validated.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adca188335f6a8b785402b2d39317fdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca188335f6a8b785402b2d39317fdda">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_SSLwrite_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;write(s) -&gt; len\rites the string s into the SSL object. Returns the number\ bytes written.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92a0bcecf091729b0951302c4b79e342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a0bcecf091729b0951302c4b79e342">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_SSLpending_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;pending() -&gt; count\eturns the number of already decrypted bytes available for&#160;</td>
+          <td class="paramname"><em>read</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">\pending on the connection.\&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace37c5aca3a936d88c2309d42c501f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace37c5aca3a936d88c2309d42c501f7f">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_SSLread_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;read([len]) -&gt; string\ead up to len bytes from the SSL socket.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b4c5bbe3cba7770f76700978a17a848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4c5bbe3cba7770f76700978a17a848">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">PySSL_SSLshutdown_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;shutdown(s) -&gt; socket\oes the SSL shutdown handshake with the remote&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">and returns\the underlying socket object.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22d24af157a72281c67be6e9810ccf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d24af157a72281c67be6e9810ccf0d">&#9670;&nbsp;</a></span>PyDoc_STRVAR() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyDoc_STRVAR </td>
+          <td>(</td>
+          <td class="paramtype">module_doc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;Implementation module for SSL socket operations. See the socket module\r documentation.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

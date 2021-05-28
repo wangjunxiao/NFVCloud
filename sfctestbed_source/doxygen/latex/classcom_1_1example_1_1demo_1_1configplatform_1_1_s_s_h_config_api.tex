@@ -1,0 +1,185 @@
+\hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api}{}\section{com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api类 参考}
+\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api}\index{com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api@{com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api}}
+
+
+完成\+V\+N\+F网元配置和链间网络的配置  
+
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae4d684c6d24bf9e98069f0fd9819e081}{add\+Link}} (String type, String local\+Ip, String back\+Ip, String forward\+Ip, String vnf\+Type, String instance\+Ip2, String intern\+Server, String config\+Ip)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a1126d2800e64cbc6327971bb190de82b}{create\+Bridge}} (String type, String instance\+Ip, String instance\+Id, String other\+Ip, String config\+Ip)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_abeccd15f19b2d50b39382aee0b2b49cd}{add\+Config}} (String type, String vnf\+Type, String vnf\+Config, String instance\+Ip, String intern\+Server, String local\+Ip, String config\+Ip)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a32430559f66a03010ef0701b3f8a8559}{update\+Config}} (String des\+Ip, String config\+Ip, String vnf\+Config)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a21ce0c13a9bcdf854dcff73722178b66}{get\+Default\+Gw\+By\+C\+I\+DR}} (String type)
+\end{DoxyCompactItemize}
+\subsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Logger \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a26870a229197a67addeff9bb888fa854}{logger}} = Logger\+Factory.\+get\+Logger(this.\+get\+Class())
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1service_1_1_instance_service}{Instance\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a62f77b5e73b2b03d85ec7a74f38ae52b}{instance\+Service}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1service_1_1_subnet_service}{Subnet\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a4eab69cb84e31fa57049fa66e8257ab6}{subnet\+Service}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_neutron_api}{Open\+Stack\+Neutron\+Api}} \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae1d3e210a8f0cb334c687e89dc05a2fe}{open\+Stack\+Neutron\+Api}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+完成\+V\+N\+F网元配置和链间网络的配置 
+
+\begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+\begin{DoxyNote}{注解}
+初始化网元：为每一个\+V\+N\+F网元添加虚拟网卡，并为网卡附上\+M\+A\+C和\+I\+P地址 链路创建：使用\+O\+V\+S创建\+G\+R\+E隧道，完成网元间的请求定向 网元配置：使用\+Click配置文件将网元功能加载到该虚机上 网元更新：使用新的\+Click配置文件将原有网元功能作更新或替换 
+\end{DoxyNote}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_abeccd15f19b2d50b39382aee0b2b49cd}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_abeccd15f19b2d50b39382aee0b2b49cd}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!add\+Config@{add\+Config}}
+\index{add\+Config@{add\+Config}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{add\+Config()}{addConfig()}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+add\+Config (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{String}]{vnf\+Type,  }\item[{String}]{vnf\+Config,  }\item[{String}]{instance\+Ip,  }\item[{String}]{intern\+Server,  }\item[{String}]{local\+Ip,  }\item[{String}]{config\+Ip }\end{DoxyParamCaption})}
+
+用于将\+Click配置文件加载到该\+V\+N\+F所在的虚机中 
+\begin{DoxyParams}{参数}
+{\em type} & 字符串，指明该\+V\+N\+F在\+S\+F\+C链中的位置，链首链尾或链间 \\
+\hline
+{\em vnf\+Type} & 字符串，指明该\+V\+N\+F的类型，为\+Firewalls、nat或其他等等 \\
+\hline
+{\em vnf\+Config} & 字符串，内容为\+Click配置文件 \\
+\hline
+{\em instance\+Ip} & 字符串，\+N\+A\+T设备的外网地址，用于构成\+Click配置文件中\+Address\+Info组件中的内容 \\
+\hline
+{\em intern\+Server} & 字符串，\+N\+A\+T设备\+Click配置文件中\+Address\+Indo组件中内网服务器的\+I\+P地址 \\
+\hline
+{\em local\+Ip} & 字符串，配置节点可访问的该\+V\+N\+F所在虚拟机的\+I\+P地址 \\
+\hline
+{\em config\+Ip} & 字符串，配置节点的\+I\+P地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串，返回\+R\+P\+C请求的结果 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae4d684c6d24bf9e98069f0fd9819e081}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae4d684c6d24bf9e98069f0fd9819e081}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!add\+Link@{add\+Link}}
+\index{add\+Link@{add\+Link}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{add\+Link()}{addLink()}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+add\+Link (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{String}]{local\+Ip,  }\item[{String}]{back\+Ip,  }\item[{String}]{forward\+Ip,  }\item[{String}]{vnf\+Type,  }\item[{String}]{instance\+Ip2,  }\item[{String}]{intern\+Server,  }\item[{String}]{config\+Ip }\end{DoxyParamCaption})}
+
+为每个\+V\+N\+F所在虚机创建虚拟网卡，并配置网卡\+M\+A\+C和\+I\+P，添加流表规则来规定数据包在这些网卡中的传输 
+\begin{DoxyParams}{参数}
+{\em type} & 字符串，用于指示该网元在\+S\+F\+C中的位置，分为链首，链尾和链间 \\
+\hline
+{\em local\+Ip} & 字符串，用于指明该\+V\+N\+F所在虚机的\+I\+P地址 \\
+\hline
+{\em back\+Ip} & 字符串，\+S\+F\+C链中下一跳\+V\+N\+F所在虚机的\+I\+P地址 \\
+\hline
+{\em forward\+Ip} & 字符串，\+S\+F\+C链中上一条\+V\+N\+F所在虚机的\+I\+P地址 \\
+\hline
+{\em vnf\+Type} & 字符串，该\+V\+N\+F所承载的网元功能，如\+Firewalls、\+N\+A\+T等 \\
+\hline
+{\em instance\+Ip2} & 字符串，当\+S\+F\+C类型为跨域通信类型时，需要此参数，该\+I\+P是一个\+Open\+Stack的浮动\+I\+P，用于将\+Open\+Stack内网流量的\+I\+P改写为外网能访问的浮动\+IP \\
+\hline
+{\em intern\+Server} & 字符串，用于告知\+N\+A\+T设备内网服务器的\+I\+P地址，当内外网访问流量是针对内网服务器时进行相应的流量地址改写和传输 \\
+\hline
+{\em config\+Ip} & 字符串，用于指明配置节点的\+I\+P地址，从而完成\+R\+P\+C通信 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串，返回\+R\+P\+C请求的结果 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a1126d2800e64cbc6327971bb190de82b}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a1126d2800e64cbc6327971bb190de82b}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!create\+Bridge@{create\+Bridge}}
+\index{create\+Bridge@{create\+Bridge}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{create\+Bridge()}{createBridge()}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+create\+Bridge (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{String}]{instance\+Ip,  }\item[{String}]{instance\+Id,  }\item[{String}]{other\+Ip,  }\item[{String}]{config\+Ip }\end{DoxyParamCaption})}
+
+用于创建位于\+S\+F\+C两端的客户机中的虚拟网卡，用于接入\+S\+F\+C的链首或链尾 
+\begin{DoxyParams}{参数}
+{\em type} & 字符串，指明客户机接入\+S\+F\+C的链首还是链尾 \\
+\hline
+{\em instance\+Ip} & 字符串，指明该客户机的\+I\+P地址 \\
+\hline
+{\em instance\+Id} & 字符串，提供该客户机的实例\+I\+D，用于在数据库中查找虚拟网卡应该设置的\+I\+P地址 \\
+\hline
+{\em other\+Ip} & 字符串，指明\+S\+F\+C链首或链尾\+V\+N\+F的\+I\+P地址，用于构建\+G\+R\+E隧道 \\
+\hline
+{\em config\+Ip} & 字符串，指明配置节点的地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串，返回\+R\+P\+C访问的结果 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a21ce0c13a9bcdf854dcff73722178b66}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a21ce0c13a9bcdf854dcff73722178b66}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!get\+Default\+Gw\+By\+C\+I\+DR@{get\+Default\+Gw\+By\+C\+I\+DR}}
+\index{get\+Default\+Gw\+By\+C\+I\+DR@{get\+Default\+Gw\+By\+C\+I\+DR}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{get\+Default\+Gw\+By\+C\+I\+D\+R()}{getDefaultGwByCIDR()}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+get\+Default\+Gw\+By\+C\+I\+DR (\begin{DoxyParamCaption}\item[{String}]{type }\end{DoxyParamCaption})}
+
+用于提取用户定义的内部子网和外部子网的\+C\+I\+DR 
+\begin{DoxyParams}{参数}
+{\em type} & 字符串，用于指明是内网还是外网 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串，返回所取子网网关的\+C\+I\+DR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a32430559f66a03010ef0701b3f8a8559}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a32430559f66a03010ef0701b3f8a8559}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!update\+Config@{update\+Config}}
+\index{update\+Config@{update\+Config}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{update\+Config()}{updateConfig()}}
+{\footnotesize\ttfamily String com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+update\+Config (\begin{DoxyParamCaption}\item[{String}]{des\+Ip,  }\item[{String}]{config\+Ip,  }\item[{String}]{vnf\+Config }\end{DoxyParamCaption})}
+
+更新\+V\+N\+F实例中的\+Click配置文件 
+\begin{DoxyParams}{参数}
+{\em des\+Ip} & 字符串，用于指明需要更新\+Click配置文件的\+V\+N\+F实例所在虚机的\+I\+P地址 \\
+\hline
+{\em config\+Ip} & 字符串，用于指明配置文件的\+I\+P地址 \\
+\hline
+{\em vnf\+Config} & 字符串，用于\+Click配置文件更新的配置信息 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串，返回\+R\+P\+C请求的结果 
+\end{DoxyReturn}
+
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a62f77b5e73b2b03d85ec7a74f38ae52b}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a62f77b5e73b2b03d85ec7a74f38ae52b}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!instance\+Service@{instance\+Service}}
+\index{instance\+Service@{instance\+Service}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{instance\+Service}{instanceService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1service_1_1_instance_service}{Instance\+Service}} com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+instance\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a26870a229197a67addeff9bb888fa854}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a26870a229197a67addeff9bb888fa854}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!logger@{logger}}
+\index{logger@{logger}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily Logger com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+logger = Logger\+Factory.\+get\+Logger(this.\+get\+Class())\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae1d3e210a8f0cb334c687e89dc05a2fe}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_ae1d3e210a8f0cb334c687e89dc05a2fe}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!open\+Stack\+Neutron\+Api@{open\+Stack\+Neutron\+Api}}
+\index{open\+Stack\+Neutron\+Api@{open\+Stack\+Neutron\+Api}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{open\+Stack\+Neutron\+Api}{openStackNeutronApi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1openstack_1_1_open_stack_neutron_api}{Open\+Stack\+Neutron\+Api}} com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+open\+Stack\+Neutron\+Api\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a4eab69cb84e31fa57049fa66e8257ab6}\label{classcom_1_1example_1_1demo_1_1configplatform_1_1_s_s_h_config_api_a4eab69cb84e31fa57049fa66e8257ab6}} 
+\index{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}!subnet\+Service@{subnet\+Service}}
+\index{subnet\+Service@{subnet\+Service}!com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api@{com\+::example\+::demo\+::configplatform\+::\+S\+S\+H\+Config\+Api}}
+\subsubsection{\texorpdfstring{subnet\+Service}{subnetService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1service_1_1_subnet_service}{Subnet\+Service}} com.\+example.\+demo.\+configplatform.\+S\+S\+H\+Config\+Api.\+subnet\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/configplatform/\mbox{\hyperlink{_s_s_h_config_api_8java}{S\+S\+H\+Config\+Api.\+java}}\end{DoxyCompactItemize}

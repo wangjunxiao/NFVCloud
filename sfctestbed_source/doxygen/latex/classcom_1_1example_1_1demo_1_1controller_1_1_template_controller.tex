@@ -1,0 +1,85 @@
+\hypertarget{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller}{}\section{com.\+example.\+demo.\+controller.\+Template\+Controller类 参考}
+\label{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller}\index{com.\+example.\+demo.\+controller.\+Template\+Controller@{com.\+example.\+demo.\+controller.\+Template\+Controller}}
+
+
+用于处理前台用户提交的用于创建\+S\+F\+C链资源的\+Template模板  
+
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_ae134c853f3d9422c8fb79cb2460d1742}{template\+Lexer}} (@Request\+Body String template)  throws Interrupted\+Exception
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a5b2e16c0f3506c6a4b21f7cbb36c899b}{template\+Vnf\+Update}} (@Request\+Body String vnf\+Update)  throws Interrupted\+Exception
+\end{DoxyCompactItemize}
+\subsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1demo_1_1templates_1_1_json_template_lexer}{Json\+Template\+Lexer}} \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a3eec265b5ae5f560a034936fe8c4c6e7}{template\+Lexer}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+用于处理前台用户提交的用于创建\+S\+F\+C链资源的\+Template模板 
+
+\begin{DoxyAuthor}{作者}
+ychuang 
+\end{DoxyAuthor}
+\begin{DoxyNote}{注解}
+具有template\+Lexer解析器，用于解析前台提交的资源模板 
+\end{DoxyNote}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_ae134c853f3d9422c8fb79cb2460d1742}\label{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_ae134c853f3d9422c8fb79cb2460d1742}} 
+\index{com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}!template\+Lexer@{template\+Lexer}}
+\index{template\+Lexer@{template\+Lexer}!com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}}
+\subsubsection{\texorpdfstring{template\+Lexer()}{templateLexer()}}
+{\footnotesize\ttfamily int com.\+example.\+demo.\+controller.\+Template\+Controller.\+template\+Lexer (\begin{DoxyParamCaption}\item[{@Request\+Body String}]{template }\end{DoxyParamCaption}) throws Interrupted\+Exception}
+
+用于解析前台提交的\+S\+FC J\+S\+O\+N模板 
+\begin{DoxyParams}{参数}
+{\em template} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+用户创建\+S\+F\+C的结果，成功or失败 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{异常}
+{\em Interrupted\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a5b2e16c0f3506c6a4b21f7cbb36c899b}\label{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a5b2e16c0f3506c6a4b21f7cbb36c899b}} 
+\index{com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}!template\+Vnf\+Update@{template\+Vnf\+Update}}
+\index{template\+Vnf\+Update@{template\+Vnf\+Update}!com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}}
+\subsubsection{\texorpdfstring{template\+Vnf\+Update()}{templateVnfUpdate()}}
+{\footnotesize\ttfamily int com.\+example.\+demo.\+controller.\+Template\+Controller.\+template\+Vnf\+Update (\begin{DoxyParamCaption}\item[{@Request\+Body String}]{vnf\+Update }\end{DoxyParamCaption}) throws Interrupted\+Exception}
+
+用于前台提交针对\+V\+N\+F的更新 
+\begin{DoxyParams}{参数}
+{\em vnf\+Update} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+用户更新网元功能的结果，成功or失败 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{异常}
+{\em Interrupted\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a3eec265b5ae5f560a034936fe8c4c6e7}\label{classcom_1_1example_1_1demo_1_1controller_1_1_template_controller_a3eec265b5ae5f560a034936fe8c4c6e7}} 
+\index{com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}!template\+Lexer@{template\+Lexer}}
+\index{template\+Lexer@{template\+Lexer}!com\+::example\+::demo\+::controller\+::\+Template\+Controller@{com\+::example\+::demo\+::controller\+::\+Template\+Controller}}
+\subsubsection{\texorpdfstring{template\+Lexer}{templateLexer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo_1_1templates_1_1_json_template_lexer}{Json\+Template\+Lexer}} com.\+example.\+demo.\+controller.\+Template\+Controller.\+template\+Lexer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/demo/src/main/java/com/example/demo/controller/\mbox{\hyperlink{_template_controller_8java}{Template\+Controller.\+java}}\end{DoxyCompactItemize}
