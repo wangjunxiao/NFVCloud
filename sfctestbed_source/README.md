@@ -1,10 +1,10 @@
-#Prerequisites
+# Prerequisites
 
 1. you need to install an eclipse IDE or IntelliJ IDEA. 
 2. insert a maven plugin into the IDE. 
 3. you need to install jdk1.7+ version. 
 
-#Credits
+# Credits
 
 1. eclipse 2. IDEA 3. maven 4. doxygen
 
